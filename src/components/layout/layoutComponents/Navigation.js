@@ -40,10 +40,10 @@ function Navigation() {
             {auth ? (
               <>
                 <li onClick={handleToggle}>
-                  <NavLink to="/posts">Explore</NavLink>
+                  <NavLink to="/posts">Latest</NavLink>
                 </li>
                 <li onClick={handleToggle}>
-                  <NavLink to="/people">People</NavLink>
+                  <NavLink to="/profiles">Contributors</NavLink>
                 </li>
                 <li className='user' onClick={handleToggle}>
                   <NavLink to="/myprofile"><i class="fa-solid fa-user"></i></NavLink>

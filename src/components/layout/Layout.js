@@ -1,4 +1,4 @@
-import Navigation from './layoutComponents/Navigation';
+import { AuthProvider } from '../../context/AuthContext';
 
 import {
   BrowserRouter as Router,
@@ -10,10 +10,11 @@ import Home from '../home/Home';
 import Login from '../login/Login';
 import Register from '../register/Register';
 import Posts from '../posts/Posts';
-import ProfileList from '../profiles/ProfileList';
+import Profiles from '../profiles/Profiles';
+import ProfileDetail from '../profiles/ProfileDetail';
+import Navigation from './layoutComponents/Navigation';
 
 
-import { AuthProvider } from '../../context/AuthContext';
 
 function Layout() {
   return (
@@ -25,9 +26,8 @@ function Layout() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/posts" element={<Posts />} />
-          {/* <Route path="/posts/detail/:id" element={<PostDetails />} /> */}
-          <Route path="/profiles" element={<ProfileList />} />
-          {/* <Route path="/profiles/detail/:name" element={<ProfileDetails />} /> */}
+          <Route path="/profiles" element={<Profiles />} />
+          <Route path="/profiles/detail/:name" element={<ProfileDetail />} />
         </Routes>
       </Router>
     </AuthProvider>

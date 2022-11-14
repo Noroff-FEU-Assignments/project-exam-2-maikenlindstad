@@ -8,7 +8,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-size: 1.4rem;
+  font-size: 1rem;
 }
 
 /* TYPOGRAPHY */
@@ -74,22 +74,22 @@ h2 {
 }
 
 .navbar {
-  max-width: 1600px;
-  height: 80px;
-  margin: auto;
+  max-width: 1200px;
+  height: 50px;
+  margin: 0 auto;
   display: flex;
   justify-content: flex-end;
   /* background-color: #ffa44d; */
   /* background-color: #799dab; */
   align-items: center;
-  padding: 30px 10px;
+  padding: 0px 30px;
   z-index: 5;
 }
 img {
   /* height: 500px; */
   /* height: 100%; */
   /* width: auto; */
-  height: 500px;
+  width: 100%;
   margin: 0 auto;
   /* max-width: 100px; */
 }
@@ -163,6 +163,7 @@ header {
   background-color: #799dab;
   /* margin-bottom: 40px; */
   z-index: 200;
+  height: 50px;
 }
 
 span {
@@ -178,7 +179,7 @@ span {
 }
 
 .logo h1 {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin: 0;
   text-transform: uppercase;
 }
@@ -225,7 +226,7 @@ span {
 
 .cta-btn,
 .cta-follow {
-  padding: 10px 25px;
+  padding: 5px 25px;
   background-color: rgb(255, 255, 255, 0.8);
   background-color: #ffe1c6b1;
   border-radius: 50px 50px 50px 0;
@@ -317,7 +318,7 @@ footer li {
 }
 
 .post-card {
-  max-width: 1000px;
+  max-width: 700px;
   margin: 60px auto;
   padding: 0 20px;
 }
@@ -373,13 +374,13 @@ footer li {
 
 /* PROFILE */
 .profile {
-  background-color: #1d1c1b;
-  height: 200vh;
+  background-color: #1d1c1be6;
+  /* height: 200vh; */
 }
 
 .profileBanner {
   width: 100%;
-  height: 350px;
+  height: 300px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position-y: center;
@@ -403,12 +404,18 @@ footer li {
   z-index: 2;
 }
 
+.profileDataSection {
+  border-bottom: solid #799dab 2px;
+  padding: 0;
+  background-color: #1d1c1b;
+}
+
 .profileData {
-  padding: 10px 0;
+  max-width: 1200px;
+  padding: 10px 0 0 0;
   margin: 0 auto 20px auto;
   display: flex;
   justify-content: space-between;
-  border-bottom: solid #799dab 2px;
 }
 
 .profileData > div {
@@ -424,8 +431,11 @@ footer li {
 
 /* PEOPLE */
 
+.profileWrapper {
+  margin: 0 40px;
+}
 .profileSection {
-  max-width: 1600px;
+  max-width: 1200px;
   margin: 60px auto;
   display: flex;
   flex-wrap: wrap;
@@ -434,19 +444,19 @@ footer li {
   padding: 0 50px;
 }
 .profileCards {
-  width: 250px;
+  width: 180px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 5px solid rgba(255, 255, 0, 0);
+  border: 4px solid rgba(255, 255, 0, 0);
   border-radius: 25px 25px 25px 0;
   /* box-shadow: #799dab 10px 10px; */
 }
 
 .profileCards:hover {
   transition: 0.2s;
-  border: 5px solid #799dab;
+  border: 4px solid #799dab;
   cursor: pointer;
 }
 
@@ -455,7 +465,7 @@ footer li {
   height: 230px;
   border-radius: 20px 20px 0 0;
   background-color: rgb(96, 55, 55);
-  background-color: #46626580;
+  background-color: #102c32;
   /* opacity: 0.8; */
   background-size: cover;
   background-position-x: center;
@@ -470,6 +480,7 @@ footer li {
   background-size: cover;
   color: #ffe2c6;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   /* flex-wrap: wrap; */
@@ -477,25 +488,78 @@ footer li {
 }
 
 .profileName h3 {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
+}
+
+.profileName p {
+  font-size: 0.6rem;
+}
+
+.profilePictureSection {
+  background-color: #1d1c1b;
+  max-width: 1000px;
+  margin: 0px auto;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-left: #596b72 3px solid;
+  border-right: #596b72 3px solid;
+}
+
+.profilePictureSection a {
+  font-size: 0.7rem;
+  opacity: 0.5;
+}
+
+.profilePictureSection a:hover {
+  transition: 0.2s;
+  opacity: 1;
 }
 
 .profileContent {
-  width: 90%;
-  margin: 20px auto;
+  max-width: 1000px;
+  background-color: #1d1c1b;
+  margin: 0px auto;
+  padding: 20px;
   display: grid;
-  grid-template-columns: 25% 75%;
+  grid-template-columns: 30% 70%;
+  border-left: #596b72 3px solid;
+  border-right: #596b72 3px solid;
 }
 .additionalProfileInformation {
-  /* background-color: rgb(78, 120, 132); */
-  height: 500px;
+  background-color: #222120;
+  padding: 10px;
+  height: 200px;
+  border-radius: 10px 10px 10px 0;
 }
 
 .profilePosts {
   /* background-color: #272a3a; */
   height: 100vh;
+  padding: 10px;
 }
-@media (max-width: 768px) {
+
+@media only screen and (max-width: 1079px) {
+  .post-card {
+    max-width: 550px;
+  }
+
+  .profilePicture {
+    height: 180px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .profileSection {
+    gap: 0;
+    padding: 0;
+  }
+
+  .profileCards {
+    width: 150px;
+  }
   .navbar {
     position: relative;
     transition: 0.5s height ease-in-out;
@@ -503,6 +567,11 @@ footer li {
 
   .navbar.expanded {
     height: 100vh;
+    background-color: #799dab;
+  }
+
+  header {
+    height: 80px;
   }
 
   .navbar.expanded .nav__links {
