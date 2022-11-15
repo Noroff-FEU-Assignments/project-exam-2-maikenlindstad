@@ -234,6 +234,17 @@ span {
   transition: all 0.3s ease 0s;
   color: #141414;
 }
+h3 {
+  color: white;
+}
+.reactionField {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0 20px 0;
+}
+.right {
+  border-radius: 50px 0px 50px 50px;
+}
 
 h1,
 .cta-btn,
@@ -431,6 +442,21 @@ footer li {
 
 /* PEOPLE */
 
+.profilesPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profilesPage > div:nth-of-type(2) {
+  max-width: 1000px;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+
 .profileWrapper {
   margin: 0 40px;
 }
@@ -539,6 +565,22 @@ footer li {
   /* background-color: #272a3a; */
   height: 100vh;
   padding: 10px;
+}
+
+@media only screen and (min-width: 1400px) {
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  a,
+  i,
+  .logo h1,
+  li,
+  .cta-btn {
+    font-size: 2rem;
+    color: white;
+  }
 }
 
 @media only screen and (max-width: 1079px) {

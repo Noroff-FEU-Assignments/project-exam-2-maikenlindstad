@@ -1,10 +1,13 @@
 import { useState, useEffect, useContext } from "react";
-import { API, PEOPLE_PATH } from "../../constants/api";
+import { API, PROFILES_PATH } from "../../constants/api";
 import AuthContext from "../../context/AuthContext";
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 import ProfileItem from './ProfileItem'
 
-const peoplesUrl = API + PEOPLE_PATH;
+let offset = 200;
+
+const PROFILE_OFFSET_PATH = API + PROFILES_PATH + "?sortOrder=asc&limit=" + 50 + "&offset=" + offset;
+console.log(PROFILE_OFFSET_PATH);
 
 function ProfileList() {
   const [profiles, setProfiles] = useState([]);
@@ -21,7 +24,7 @@ function ProfileList() {
         }
       }
       try {
-        const response = await fetch(peoplesUrl, options);
+        const response = await fetch(PROFILE_OFFSET_PATH, options);
         if (response.ok) {
           const json = await response.json();
           console.log(json);
@@ -47,14 +50,22 @@ function ProfileList() {
   }
 
   return (
-    <><div className="profileSection">
-      {profiles.map(function (profile) {
-        const { name, email, avatar } = profile;
-        return <div>
-          <ProfileItem key={name} name={name} email={email} avatar={avatar} />
-        </div>;
-      })}
-    </div>
+    <>
+      <div className="profilesPage">
+        <div className="profileSection">
+          {profiles.map(function (profile) {
+            const { name, email, avatar } = profile;
+            return <div>
+              <ProfileItem key={name} name={name} email={email} avatar={avatar} />
+            </div>;
+          })}
+
+        </div>
+        <div>
+          <div className="cta-btn previous">Previous</div>
+          <div className="cta-btn right next">Next</div>
+        </div>
+      </div>
     </>
   );
 }

@@ -1,8 +1,9 @@
 import { useState, useEffect, useContext } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import AuthContext from "../../context/AuthContext";
-import { API, PEOPLE_PATH } from "../../constants/api";
+import { API, PROFILE_PATH, SINGLE_PROFILE_PATH } from "../../constants/api";
 // import useAxios from "../../hooks/useAxios";
+
 
 function ProfileDetail() {
   const [profile, setProfile] = useState([]);
@@ -20,7 +21,7 @@ function ProfileDetail() {
     navigation("/profiles");
   }
 
-  const url = API + PEOPLE_PATH + "/" + name;
+  const url = API + SINGLE_PROFILE_PATH + "/" + name;
 
   useEffect(() => {
     async function fetchProfiles() {
@@ -64,7 +65,7 @@ function ProfileDetail() {
       <div className="profileDataSection">
         <div className="profileData">
           <div>
-            <a href="../"><i class="fa-solid fa-chevron-left"></i></a>
+            <a href="/posts"><i class="fa-solid fa-chevron-left"></i></a>
             <span></span>
             {/* <a href="" className="active"><p>{profile.name}</p> </a> */}
           </div>
@@ -95,10 +96,12 @@ function ProfileDetail() {
           </div>
           <div className="profilePosts">
             <h3>Posts</h3>
+            <div>
+              <p>This is where the posts will be displayed.</p>
+            </div>
           </div>
-        </div></div>
-
-
+        </div>
+      </div>
     </div>
   );
 }

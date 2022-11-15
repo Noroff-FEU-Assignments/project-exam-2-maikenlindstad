@@ -13,6 +13,7 @@ import Posts from '../posts/Posts';
 import Profiles from '../profiles/Profiles';
 import ProfileDetail from '../profiles/ProfileDetail';
 import Navigation from './layoutComponents/Navigation';
+import PostDetail from '../posts/PostDetail';
 
 
 
@@ -26,6 +27,7 @@ function Layout() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/posts" element={<Posts />} />
+          <Route path="/posts/detail/:id" element={<PostDetail />} />
           <Route path="/profiles" element={<Profiles />} />
           <Route path="/profiles/detail/:name" element={<ProfileDetail />} />
         </Routes>
