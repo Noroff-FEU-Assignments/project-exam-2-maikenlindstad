@@ -4,7 +4,7 @@ import AuthContext from "../../context/AuthContext";
 // import { useParams } from "react-router-dom";
 import ProfileItem from './ProfileItem'
 
-let offset = 200;
+let offset = 350;
 
 const PROFILE_OFFSET_PATH = API + PROFILES_PATH + "?sortOrder=asc&limit=" + 50 + "&offset=" + offset;
 console.log(PROFILE_OFFSET_PATH);

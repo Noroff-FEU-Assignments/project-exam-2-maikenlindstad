@@ -1,20 +1,25 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import { FiMoreHorizontal } from "react-icons/fi";
 
 // Denne endrer på utseende til listen av poster 
 
+const profilePictureDefault = "https://images.pexels.com/photos/3094799/pexels-photo-3094799.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
 function PostItem({ id, title, body, media, created, updated, _count, comments, reactions, author, name }) {
   return (
     <>
       <div className="post-card">
         <div className="postCard-head">
           <Link to={`../profiles/detail/${author.name}`}>
-            <div className="avatar-section" style={{ backgroundImage: `url(${author.avatar})` }}>
+            <div className="avatar-section" style={{ backgroundImage: `url(${author.avatar ? author.avatar : profilePictureDefault})` }}>
             </div>
           </Link>
           <div className="userInfo-section">
             <Link to={`../profiles/detail/${author.name}`}>
               <h4>{author.name} </h4>
+            </Link>
+            <Link to={`../posts/edit/${id}`}>
+              <FiMoreHorizontal />
             </Link>
           </div>
         </div>

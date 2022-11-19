@@ -5,7 +5,6 @@ import AuthContext from "../../context/AuthContext";
 import PostItem from "./PostItem";
 
 const postsUrl = API + POST_PATH + "?_author=true&_comments=true&_reactions=true";
-const peopleUrl = API + PROFILES_PATH;
 
 function PostList() {
   const [posts, setPosts] = useState([]);
@@ -27,6 +26,7 @@ function PostList() {
           const jsonPosts = await postResponse.json();
           console.log(jsonPosts);
           setPosts(jsonPosts);
+
         } else {
           setError("An error occured");
         }
@@ -46,10 +46,14 @@ function PostList() {
   if (error) {
     return <div>ERROR: An error occured</div>;
   }
+
+
+
   // Denne endrer på utseende til detaljene av postene
+
   return (
     <>
-      {posts.map(function (post) {
+      {posts.map((post) => {
         const { id, title, body, media, created, updated, _count, comments, author, name, avatar } = post;
         return <div>
           <PostItem key={id} id={id} title={title}

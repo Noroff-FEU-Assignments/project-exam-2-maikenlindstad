@@ -11,6 +11,24 @@
   font-size: 1rem;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+  /* color: white; */
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--lightestgrey);
+  transition: 0.4s;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #657277;
+  border-radius: 5px 5px 5px 0;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #799dab;
+}
 /* TYPOGRAPHY */
 
 /* COLOR:
@@ -127,7 +145,7 @@ body {
       rgba(0, 0, 0, 0),
       rgba(0, 0, 0, 0.45)
     ),
-    url("./images/pexels-uzunov-rostislav-5011647.jpg");
+    url("./images/pexels-mo-eid-8347501.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -245,7 +263,35 @@ h3 {
 .right {
   border-radius: 50px 0px 50px 50px;
 }
+.comment {
+  padding: 5px;
+  margin: 10px 0;
+  background-color: #222120;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.552);
+}
 
+.commentBody {
+  margin-left: 5px;
+  background-color: rgb(42, 45, 47);
+  border-radius: 0px 5px 5px 5px;
+  padding: 5px;
+  display: inline-block;
+  /* font-weight: 100; */
+}
+h4 {
+  font-weight: 500;
+  color: white;
+}
+.commentRespond {
+  display: flex;
+}
+.commentRespond p {
+  padding: 0 5px;
+  cursor: pointer;
+}
+.commentRespond p:hover {
+  text-decoration: underline;
+}
 h1,
 .cta-btn,
 .cta-follow {
@@ -333,7 +379,9 @@ footer li {
   margin: 60px auto;
   padding: 0 20px;
 }
-
+.profilePosts .postCard-body {
+  border-radius: 25px 25px 25px 0;
+}
 .postCard-head {
   display: flex;
   /* background-color: #1d1c1b; */
@@ -352,14 +400,22 @@ footer li {
   border: 3px solid #799dab;
   cursor: pointer;
 }
-
+li .active {
+  color: white;
+  text-decoration: underline;
+}
 .avatar-section img {
   width: 100%;
 }
 
+Link,
+a {
+  color: white;
+}
+
 .userInfo-section {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   padding: 40px;
   width: 95%;
@@ -386,7 +442,8 @@ footer li {
 /* PROFILE */
 .profile {
   background-color: #1d1c1be6;
-  /* height: 200vh; */
+  overflow: hidden;
+  /* padding-bottom: 150px; */
 }
 
 .profileBanner {
@@ -553,7 +610,9 @@ footer li {
   grid-template-columns: 30% 70%;
   border-left: #596b72 3px solid;
   border-right: #596b72 3px solid;
+  /* height: auto; */
 }
+
 .additionalProfileInformation {
   background-color: #222120;
   padding: 10px;
@@ -565,9 +624,14 @@ footer li {
   /* background-color: #272a3a; */
   height: 100vh;
   padding: 10px;
+  overflow: auto;
+  /* width: 300px; */
+  /* height: 100px; */
+  /* overflow-y: scroll; */
+  /* scrollbar-color: rebeccapurple green; */
 }
 
-@media only screen and (min-width: 1400px) {
+/* @media only screen and (min-width: 1400px) {
   p,
   h1,
   h2,
@@ -581,7 +645,7 @@ footer li {
     font-size: 2rem;
     color: white;
   }
-}
+} */
 
 @media only screen and (max-width: 1079px) {
   .post-card {

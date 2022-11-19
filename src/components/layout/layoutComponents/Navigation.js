@@ -5,6 +5,10 @@ import AuthContext from '../../../context/AuthContext';
 import { Icon } from 'react-icons-kit'
 import { alignRight } from 'react-icons-kit/feather/alignRight'
 import { x } from 'react-icons-kit/feather/x'
+import { useParams } from 'react-router-dom';
+
+
+// const { name } = useParams();
 
 function Navigation() {
 
@@ -46,7 +50,7 @@ function Navigation() {
                   <NavLink to="/profiles">Contributors</NavLink>
                 </li>
                 <li className='user' onClick={handleToggle}>
-                  <NavLink to="/myprofile"><i class="fa-solid fa-user"></i></NavLink>
+                  <NavLink to="/myprofile">Name</NavLink>
                 </li>
                 <li onClick={handleToggle}>
                   <NavLink onClick={logout} className='cta-btn' to="/login">Logout</NavLink>

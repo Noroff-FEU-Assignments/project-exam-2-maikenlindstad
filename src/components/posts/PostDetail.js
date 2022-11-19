@@ -3,9 +3,13 @@ import { useParams, useNavigate } from "react-router-dom";
 import AuthContext from "../../context/AuthContext";
 import { API, POST_PATH } from "../../constants/api";
 import { Link } from "react-router-dom";
+import PostComment from "./PostComment";
+import { GoTrashcan, GoPencil } from "react-icons/go";
 
-function PostDetail() {
-  const [post, setPosts] = useState([]);
+
+function PostDetails() {
+  const [postDetails, setPostDetails] = useState([]);
+  // Hva var forskjellen på null og [] i koden over?
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [auth, setAuth] = useContext(AuthContext);
@@ -23,7 +27,7 @@ function PostDetail() {
   const url = API + POST_PATH + "/" + id + "?_author=true&_comments=true&_reactions=true";
 
   useEffect(() => {
-    async function fetchPosts() {
+    async function fetchPostDetails() {
       const options = {
         method: "GET",
         headers: {
@@ -35,7 +39,7 @@ function PostDetail() {
         if (response.ok) {
           const json = await response.json();
           console.log(json);
-          setPosts(json);
+          setPostDetails(json);
         } else {
           setError("An error occured");
         }
@@ -45,7 +49,7 @@ function PostDetail() {
         setLoading(false);
       }
     }
-    fetchPosts();
+    fetchPostDetails();
   }, []);
 
   if (loading) {
@@ -58,34 +62,76 @@ function PostDetail() {
 
   return (
     <>
+      <Link to={`../posts`}>
+        <p>Back</p>
+      </Link>
       <div className="post-card">
         <div className="postCard-head">
-          <Link to={`../profiles/detail/${name}`}>
-            <div className="avatar-section" style={{ backgroundImage: `url(${post.author.avatar})` }}>
+          <Link to={`/profiles/detail/${name}`}>
+            <div className="avatar-section" style={{ backgroundImage: `url(${postDetails.author.avatar})` }}>
             </div>
           </Link>
           <div className="userInfo-section">
-            <h4>{post.author.name} </h4>
+            <h3>{postDetails.author.name} </h3>
           </div>
         </div>
 
         <div className="postCard-body">
-          <h3>{post.title}</h3>
-          <p>{post.created}</p>
-          <p>{post.body}</p>
-          <img src={post.media} />
+          <h3>{postDetails.title}</h3>
+          <p>{postDetails.created}</p>
+          <p>{postDetails.body}</p>
+          <img src={postDetails.media} />
 
           <div className="reactionField">
-            <p>{post._count.comments} comments</p>
-            <p>🧡👍😂 {post._count.reactions}</p>
-          </div>
-          <div>
-            <p>Read comments/No comments:</p>
-            <div className="comments">
-              <p>{post.comments.body}</p>
+            <p>{postDetails._count.comments} comments</p>
+            <div key={id}>
+              {postDetails.reactions.map((reaction, id) => {
+                return (
+                  <span>{reaction.symbol}</span>
+                );
+              })}
             </div>
           </div>
 
+          <div>
+            <p>IF Read comments/ ELSE No comments:</p>
+          </div>
+
+          <div className="comments">
+            {postDetails.comments.map((comment, id) => {
+              return (
+                <>
+                  <div key={id} className="comment">
+                    <h4>{comment.owner}</h4>
+                    <div>
+                      <div>
+                        <div className="commentBody">
+                          <p>{comment.body}</p>
+                        </div>
+                        <Link to={`../posts/edit/${id}/comment`}>
+                          <GoPencil />
+                          <GoTrashcan />
+                        </Link>
+
+                      </div>
+
+                      <div className="commentRespond">
+                        <p>Like</p> <p>Respond</p>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </>
+
+              );
+            })}
+
+
+          </div>
+          <div>
+            <PostComment />
+          </div>
         </div>
       </div>
 
@@ -95,4 +141,4 @@ function PostDetail() {
   );
 }
 
-export default PostDetail;
+export default PostDetails;
