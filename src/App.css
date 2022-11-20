@@ -137,6 +137,9 @@ img {
   background-position-x: center;
 }
 
+.edit {
+}
+
 body {
   background-color: #141414;
   color: #ffefdf;
@@ -470,6 +473,9 @@ a {
   background-color: #7b878c;
   background-position-x: center;
   z-index: 2;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 0;
 }
 
 .profileDataSection {

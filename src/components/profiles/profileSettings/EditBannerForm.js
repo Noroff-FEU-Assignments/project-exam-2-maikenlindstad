@@ -1,0 +1,91 @@
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import * as yup from "yup";
+import { yupResolver } from "@hookform/resolvers/yup";
+import FormError from "../../common/FormError";
+import useAxios from "../../../hooks/useAxios";
+// import Heading from "../../layout/layoutComponents/Heading";
+import { API, PROFILES_PATH } from "../../../constants/api";
+
+const schema = yup.object().shape({
+  banner: yup.string().required("Enter Avatar url")
+});
+
+export default function EditBannerForm() {
+  const [banner, setBanner] = useState(null);
+  const [updated, setUpdated] = useState(false);
+  const [fetchingBanner, setFetchingBanner] = useState(true);
+  const [updatingBanner, setUpdatingBanner] = useState(false);
+  const [fetchError, setFetchError] = useState(null);
+  const [updateError, setUpdateError] = useState(null);
+
+  const { register, handleSubmit, formState: { errors } } = useForm({
+    resolver: yupResolver(schema),
+  });
+
+  const http = useAxios();
+
+  let { name } = useParams();
+
+  const url = PROFILES_PATH + `/` + name;
+
+  useEffect(function () {
+    async function getBanner() {
+      try {
+        const response = await http.get(url);
+        console.log("The Banner response I'm working with now: ", response.data);
+        setBanner(response.data);
+      } catch (error) {
+        console.log(error);
+        setFetchError(error.toString());
+      } finally {
+        setFetchingBanner(false);
+      }
+    }
+    getBanner();
+  },
+    []
+  );
+
+  async function onSubmit(data) {
+    setUpdatingBanner(true);
+    setUpdateError(null);
+    setUpdated(false);
+
+    console.log(data);
+
+    try {
+      const response = await http.put(url + "/media", data);
+      console.log("The Banner response: ", response.data);
+      setUpdated(true);
+    } catch (error) {
+      console.log("error", error);
+      setUpdateError(error.toString());
+    } finally {
+      setUpdatingBanner(false);
+    }
+  }
+
+  if (fetchingBanner) return <div>Loading...</div>;
+
+  if (fetchError) return <div>Error loading Banner</div>;
+
+  return (
+    <form onSubmit={handleSubmit(onSubmit)}>
+      {updated && <div><p>The post was updated.</p></div>}
+      {updateError && <FormError>{updateError}</FormError>}
+
+      <fieldset disabled={updatingBanner}>
+        <div>
+          <input {...register("banner")} defaultValue={banner.banner} id="banner" />
+          {errors.banner && <FormError>{errors.banner.message}</FormError>}
+        </div>
+
+        <button>{updatingBanner ? "Updating Banner..." : "Update"}</button>
+      </fieldset>
+    </form>
+  )
+
+
+}

@@ -4,6 +4,7 @@ import AuthContext from "../../context/AuthContext";
 import { API, PROFILE_PATH, SINGLE_PROFILE_PATH } from "../../constants/api";
 // import useAxios from "../../hooks/useAxios";
 import { Link } from "react-router-dom";
+import { GoPencil } from "react-icons/go";
 
 
 function ProfileDetail() {
@@ -67,6 +68,9 @@ function ProfileDetail() {
   return (
     <div className="profile">
       <div className="profileBanner" style={{ backgroundImage: `url(${profile.banner ? profile.banner : noBanner})` }}>
+        <Link to={`/profiles/edit/banner/${name}`}>
+          <span><GoPencil color="grey" size="20px" /></span>
+        </Link>
       </div>
       <div className="profileDataSection">
         <div className="profileData">
@@ -87,6 +91,9 @@ function ProfileDetail() {
       <div className="profileWrapper">
         <div className="profilePictureSection">
           <div className="profilePictureInfo" style={{ backgroundImage: `url(${profile.avatar ? profile.avatar : profilePictureDefault})` }}>
+            <Link to={`/profiles/edit/avatar/${name}`}>
+              <span><GoPencil color="grey" size="20px" /></span>
+            </Link>
           </div>
           <a style={{ color: `white` }} href="">{profile.email}</a>
         </div>
@@ -131,7 +138,7 @@ function ProfileDetail() {
           </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 }
 
