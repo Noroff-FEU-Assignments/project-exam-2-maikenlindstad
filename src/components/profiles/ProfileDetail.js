@@ -5,6 +5,8 @@ import { API, PROFILE_PATH, SINGLE_PROFILE_PATH } from "../../constants/api";
 // import useAxios from "../../hooks/useAxios";
 import { Link } from "react-router-dom";
 import { GoPencil } from "react-icons/go";
+import Follow from "./followers/Follow";
+import Unfollow from "./followers/Unfollow";
 
 
 function ProfileDetail() {
@@ -83,13 +85,19 @@ function ProfileDetail() {
             <h2>{profile.name}</h2>
           </div>
           <div>
-            <a className="cta-follow">Follow</a>
-            {/* <p className="cta-btn-follow">Follow</p> */}
+            <Follow />
+            <Unfollow />
           </div>
         </div>
       </div>
       <div className="profileWrapper">
+
         <div className="profilePictureSection">
+          <div className="followWrapper">
+            <h3>{profile._count.posts} Posts</h3>
+            <h3>{profile._count.following} Following</h3>
+            <h3>{profile._count.followers} Followers</h3>
+          </div>
           <div className="profilePictureInfo" style={{ backgroundImage: `url(${profile.avatar ? profile.avatar : profilePictureDefault})` }}>
             <Link to={`/profiles/edit/avatar/${name}`}>
               <span><GoPencil color="grey" size="20px" /></span>
@@ -108,6 +116,7 @@ function ProfileDetail() {
             <p>I definitely believe Meta will be in touch. </p>
           </div>
           <div className="profilePosts">
+
             <h3>Posts</h3>
             <div>
               {profile.posts.map((profilePost, id) => {
@@ -135,6 +144,7 @@ function ProfileDetail() {
                 );
               })}
             </div>
+
           </div>
         </div>
       </div>

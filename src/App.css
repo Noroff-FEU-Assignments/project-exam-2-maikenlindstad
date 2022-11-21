@@ -461,6 +461,14 @@ a {
   z-index: 1;
 }
 
+.followWrapper {
+  display: flex;
+}
+
+.followWrapper h3 {
+  padding: 0 15px 15px 15px;
+}
+
 .profilePictureInfo {
   /* position: relative; */
   margin: 0 auto;
