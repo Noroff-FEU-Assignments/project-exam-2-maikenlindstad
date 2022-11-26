@@ -9,7 +9,6 @@ import { API, REGISTER_PATH } from "../../constants/api";
 import AuthContext from "../../context/AuthContext";
 
 const url = API + REGISTER_PATH;
-// console.log("tHIS IS THE URL i'M WORKING WITH NOW:" + url);
 
 const schema = yup.object().shape({
   name: yup.string().required("Please enter a username"),
@@ -33,7 +32,7 @@ export default function RegisterForm() {
     setSubmitting(true);
     setRegisterError(null);
 
-    console.log(data);
+    // console.log(data);
 
     const formData = JSON.stringify(data);
 

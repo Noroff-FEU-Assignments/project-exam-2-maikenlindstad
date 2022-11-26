@@ -6,15 +6,22 @@ import { Icon } from 'react-icons-kit'
 import { alignRight } from 'react-icons-kit/feather/alignRight'
 import { x } from 'react-icons-kit/feather/x'
 import { useParams } from 'react-router-dom';
+import { BiUser } from "react-icons/bi";
 
 
-// const { name } = useParams();
 
 function Navigation() {
 
   const [auth, setAuth] = useContext(AuthContext);
 
+
+
+  let userUrl = '/profiles/details/' + auth.name;
+
   const navigate = useNavigate();
+
+
+
 
   function logout() {
     setAuth(null);
@@ -26,6 +33,8 @@ function Navigation() {
   const handleToggle = () => {
     setToggle(!toggle);
   }
+
+
 
   return (
     <header>
@@ -44,13 +53,14 @@ function Navigation() {
             {auth ? (
               <>
                 <li onClick={handleToggle}>
-                  <NavLink to="/posts">Latest</NavLink>
+                  <NavLink to="/posts" exact>Latest</NavLink>
                 </li>
                 <li onClick={handleToggle}>
                   <NavLink to="/profiles">Contributors</NavLink>
                 </li>
-                <li className='user' onClick={handleToggle}>
-                  <NavLink to="/myprofile">Name</NavLink>
+                <span>></span>
+                <li onClick={handleToggle}>
+                  <NavLink to={userUrl}>{auth.name}</NavLink>
                 </li>
                 <li onClick={handleToggle}>
                   <NavLink onClick={logout} className='cta-btn' to="/login">Logout</NavLink>
@@ -72,7 +82,7 @@ function Navigation() {
           {toggle ? <Icon icon={x} size={28} /> : <Icon icon={alignRight} size={28} />}
         </div>
       </div>
-    </header>
+    </header >
   );
 }
 

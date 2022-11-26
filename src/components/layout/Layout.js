@@ -35,6 +35,7 @@ function Layout() {
           <Route path="/profiles/detail/:name" element={<ProfileDetail />} />
           <Route path="/profiles/edit/avatar/:name" element={<EditAvatar />} />
           <Route path="/profiles/edit/banner/:name" element={<EditBanner />} />
+          <Route path="/profiles/details/:name" element={<ProfileDetail />} />
         </Routes>
       </Router>
     </AuthProvider>

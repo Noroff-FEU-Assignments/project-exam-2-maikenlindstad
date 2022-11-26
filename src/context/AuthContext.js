@@ -9,6 +9,3 @@ export const AuthProvider = (props) => {
 };
 
 export default AuthContext;
-
-// Dette er det jeg trenger for å få tak i accessToken, men hvordan...?
-// Fortsett i JS 2 Module 3.

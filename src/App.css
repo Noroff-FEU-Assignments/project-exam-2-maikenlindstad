@@ -465,8 +465,25 @@ a {
   display: flex;
 }
 
+.pageBtn {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+.pageBtn button {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  /* border-radius: 100px; */
+  border-radius: 5px 5px 5px 0;
+}
 .followWrapper h3 {
   padding: 0 15px 15px 15px;
+}
+
+.changePageButton {
+  padding: 20px;
 }
 
 .profilePictureInfo {

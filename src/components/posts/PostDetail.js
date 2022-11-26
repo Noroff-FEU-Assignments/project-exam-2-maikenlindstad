@@ -4,12 +4,12 @@ import AuthContext from "../../context/AuthContext";
 import { API, POST_PATH } from "../../constants/api";
 import { Link } from "react-router-dom";
 import PostComment from "./PostComment";
+import PostReaction from "./PostReaction";
 import { GoTrashcan, GoPencil } from "react-icons/go";
 
 
 function PostDetails() {
   const [postDetails, setPostDetails] = useState([]);
-  // Hva var forskjellen på null og [] i koden over?
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [auth, setAuth] = useContext(AuthContext);
@@ -67,12 +67,13 @@ function PostDetails() {
       </Link>
       <div className="post-card">
         <div className="postCard-head">
-          <Link to={`/profiles/detail/${name}`}>
+          <a href={`/profiles/detail/${name}`}>
             <div className="avatar-section" style={{ backgroundImage: `url(${postDetails.author.avatar})` }}>
             </div>
-          </Link>
+          </a>
           <div className="userInfo-section">
             <h3>{postDetails.author.name} </h3>
+            {/* <PostReaction /> */}
           </div>
         </div>
 

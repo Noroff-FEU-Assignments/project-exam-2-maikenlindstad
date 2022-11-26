@@ -4,6 +4,7 @@ import { FiMoreHorizontal } from "react-icons/fi";
 
 // Denne endrer på utseende til listen av poster 
 
+
 const profilePictureDefault = "https://images.pexels.com/photos/3094799/pexels-photo-3094799.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
 function PostItem({ id, title, body, media, created, updated, _count, comments, reactions, author, name }) {
   return (
@@ -38,8 +39,12 @@ function PostItem({ id, title, body, media, created, updated, _count, comments, 
               <p>{_count.comments} comments</p>
             </Link>
             <Link to={`detail/${id}`}>
+              {/* <button onClick={() => this.setState({ liked: true })}>
+                Like
+              </button> */}
               <p>🧡👍😂 {_count.reactions}</p>
             </Link>
+
           </div>
 
         </div>

@@ -3,9 +3,6 @@ import { useNavigate, useParams } from "react-router-dom";
 import useAxios from '../../../hooks/useAxios'
 import { PROFILES_PATH } from "../../../constants/api";
 
-
-
-
 export default function Follow() {
   let { name } = useParams();
   const http = useAxios();
@@ -26,7 +23,7 @@ export default function Follow() {
       // setServerError(error.toString());
     } finally {
       // setSubmitting(false);
-      // window.location.reload(true);
+      window.location.reload(true);
 
     }
   }

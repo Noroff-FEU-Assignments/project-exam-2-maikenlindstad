@@ -26,7 +26,7 @@ export default function Unfollow() {
       // setServerError(error.toString());
     } finally {
       // setSubmitting(false);
-      // window.location.reload(true);
+      window.location.reload(true);
 
     }
   }

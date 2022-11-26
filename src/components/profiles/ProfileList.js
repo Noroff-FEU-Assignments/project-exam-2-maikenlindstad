@@ -1,13 +1,9 @@
-import { useState, useEffect, useContext } from "react";
-import { API, PROFILES_PATH } from "../../constants/api";
+import React, { useState, useEffect, useContext } from "react";
 import AuthContext from "../../context/AuthContext";
-// import { useParams } from "react-router-dom";
 import ProfileItem from './ProfileItem'
+import { API, PROFILES_PATH } from '../../constants/api';
 
-let offset = 350;
-
-const PROFILE_OFFSET_PATH = API + PROFILES_PATH + "?sortOrder=asc&limit=" + 50 + "&offset=" + offset;
-console.log(PROFILE_OFFSET_PATH);
+const url = API + PROFILES_PATH + "?sortOrder=asc&limit=50&offset=0"
 
 function ProfileList() {
   const [profiles, setProfiles] = useState([]);
@@ -24,10 +20,9 @@ function ProfileList() {
         }
       }
       try {
-        const response = await fetch(PROFILE_OFFSET_PATH, options);
+        const response = await fetch(url, options);
         if (response.ok) {
           const json = await response.json();
-          console.log(json);
           setProfiles(json);
         } else {
           setError("An error occured");
@@ -51,6 +46,7 @@ function ProfileList() {
 
   return (
     <>
+      {/* <NextPage /> */}
       <div className="profilesPage">
         <div className="profileSection">
           {profiles.map(function (profile) {
@@ -59,12 +55,8 @@ function ProfileList() {
               <ProfileItem key={name} name={name} email={email} avatar={avatar} />
             </div>;
           })}
+        </div>
 
-        </div>
-        <div>
-          <div className="cta-btn previous">Previous</div>
-          <div className="cta-btn right next">Next</div>
-        </div>
       </div>
     </>
   );
