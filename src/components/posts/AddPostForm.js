@@ -47,7 +47,7 @@ export default function AddPostForm() {
       setServerError(error.toString());
     } finally {
       setSubmitting(false);
-      window.location.reload(true);
+      // window.location.reload(true);
 
     }
   }
@@ -58,7 +58,7 @@ export default function AddPostForm() {
         {serverError && <FormError>{serverError}</FormError>}
         <fieldset disabled={submitting}>
           <div>
-            <input {...register("title")} id="title" placeholder="Title" />
+            <input {...register("title")} id="title" placeholder="Title*" />
             {errors.title && <FormError>{errors.title.message}</FormError>}
           </div>
 
@@ -66,6 +66,12 @@ export default function AddPostForm() {
             <input type="text"  {...register("body")} id="body" placeholder="Write something"></input>
             {errors.body && <FormError>{errors.body.message}</FormError>}
           </div>
+
+          <div>
+            <input {...register("media")} id="media" placeholder="Image url" />
+            {errors.media && <FormError>{errors.media.message}</FormError>}
+          </div>
+          {/* <p>* Must have</p> */}
 
           <button>{submitting ? "Adding post..." : "Post"}</button>
         </fieldset>

@@ -9,10 +9,12 @@ import { API, REGISTER_PATH } from "../../constants/api";
 import AuthContext from "../../context/AuthContext";
 
 const url = API + REGISTER_PATH;
+const regex = /^\w+([-+.']\w+)*@?(stud.noroff.no|noroff.no)$/;
+//Endre regex koden.
 
 const schema = yup.object().shape({
   name: yup.string().required("Please enter a username"),
-  email: yup.string().required("Please enter your email"),
+  email: yup.string().required("Please enter your email.").email().matches(regex, "You must be a student/teacher of Noroff"),
   password: yup.string().required("Please enter your password"),
 });
 
@@ -71,7 +73,7 @@ export default function RegisterForm() {
           </div>
 
           <div>
-            <input {...register("email")} id="email" placeholder="email" />
+            <input {...register("email")} id="email" placeholder="Email" />
             {errors.email && <FormError>{errors.email.message}</FormError>}
           </div>
 
@@ -80,7 +82,8 @@ export default function RegisterForm() {
             {errors.password && <FormError>{errors.password.message}</FormError>}
           </div>
 
-          <button>{submitting ? "Signing up..." : "Sign up"}</button>
+          <button className="cta-btn">{submitting ? "Signing up..." : "Sign up"}</button>
+          <p>(Redirects to login page)</p>
         </fieldset>
       </form>
     </>

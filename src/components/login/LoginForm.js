@@ -49,22 +49,20 @@ export default function LoginForm() {
   }
 
   return (
-    <>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        {loginError && <FormError>{loginError}</FormError>}
-        <fieldset disabled={submitting}>
-          <div>
-            <input {...register("email")} id="email" placeholder="email" />
-            {errors.email && <FormError>{errors.email.message}</FormError>}
-          </div>
+    <form onSubmit={handleSubmit(onSubmit)}>
+      {loginError && <FormError>{loginError}</FormError>}
+      <fieldset disabled={submitting}>
+        <div>
+          <input {...register("email")} id="email" placeholder="Email" />
+          {errors.email && <FormError>{errors.email.message}</FormError>}
+        </div>
 
-          <div>
-            <input {...register("password")} id="password" placeholder="Password" type="password" />
-            {errors.password && <FormError>{errors.password.message}</FormError>}
-          </div>
-          <button>{submitting ? "Loggin in..." : "Login"}</button>
-        </fieldset>
-      </form>
-    </>
+        <div>
+          <input {...register("password")} id="password" placeholder="Password" type="password" />
+          {errors.password && <FormError>{errors.password.message}</FormError>}
+        </div>
+        <button className="cta-btn">{submitting ? "Loggin in..." : "Login"}</button>
+      </fieldset>
+    </form>
   );
 }

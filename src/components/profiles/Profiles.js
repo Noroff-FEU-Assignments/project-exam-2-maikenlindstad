@@ -3,9 +3,9 @@ import ProfileList from './ProfileList';
 
 export default function Profiles() {
   return (
-    <>
+    <div className='wrapContent'>
       <Heading title="Contributors" />
       <ProfileList />
-    </>
+    </div>
   );
 }

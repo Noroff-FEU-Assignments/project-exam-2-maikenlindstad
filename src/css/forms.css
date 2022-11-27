@@ -1,0 +1,19 @@
+input {
+  padding: 5px;
+  margin: 2px 0;
+  border: none;
+  border-radius: 3px 3px 3px 0;
+}
+
+.loginRegisterSections .cta-btn {
+  margin-top: 10px;
+}
+
+form {
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+form .form-error {
+  max-width: 180px;
+}

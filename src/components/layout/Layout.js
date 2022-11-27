@@ -1,4 +1,6 @@
 import { AuthProvider } from '../../context/AuthContext';
+import { useContext } from 'react';
+import AuthContext from '../../context/AuthContext';
 
 import {
   BrowserRouter as Router,
@@ -18,7 +20,6 @@ import EditPost from '../posts/postSettings/EditPost';
 import EditAvatar from '../profiles/profileSettings/EditAvatar'
 import EditBanner from '../profiles/profileSettings/EditBanner'
 
-
 function Layout() {
   return (
     <AuthProvider>
@@ -37,8 +38,11 @@ function Layout() {
           <Route path="/profiles/edit/banner/:name" element={<EditBanner />} />
           <Route path="/profiles/details/:name" element={<ProfileDetail />} />
         </Routes>
+
+
       </Router>
-    </AuthProvider>
+
+    </AuthProvider >
   );
 }
 

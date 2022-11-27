@@ -1,0 +1,15 @@
+@import "base.css";
+@import "typography.css";
+@import "images.css";
+@import "buttons.css";
+@import "forms.css";
+
+/* .beforeLogin {
+  display: flex;
+  flex-direction: row;
+} */
+
+.wrapContent {
+  max-width: 1000px;
+  margin: 10px auto;
+}
