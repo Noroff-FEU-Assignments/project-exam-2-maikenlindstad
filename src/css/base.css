@@ -25,29 +25,36 @@
   background: #799dab;
 }
 
+.wrapContent {
+  max-width: 1000px;
+  margin: 40px auto;
+}
+
+.wrapper {
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
 body {
   background-color: #141414;
   color: #ffefdf;
   background-image: linear-gradient(
       90deg,
       rgba(0, 0, 0, 0),
-      rgba(0, 0, 0, 0.45)
+      rgba(0, 0, 0, 0.66)
     ),
-    url("../images/pexels-mo-eid-8347501.jpg");
+    url("../images/pexels-uzunov-rostislav-5011647.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position-x: center;
 }
 
-/* .beforeLogin {
-  background-image: linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0),
-      rgba(0, 0, 0, 0.45)
-    ),
-    url("../images/pexels-mo-eid-8347501.jpg");
-} */
+main {
+  max-width: 1600px;
+  margin: 0 auto;
+}
 
 .beforeLogin {
   background-color: #799dab;
@@ -97,4 +104,11 @@ body {
   justify-content: center;
   align-items: center;
   gap: 20px;
+}
+
+header {
+  background-color: #799dab;
+  /* margin-bottom: 40px; */
+  z-index: 200;
+  height: 50px;
 }

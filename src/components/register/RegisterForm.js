@@ -82,7 +82,7 @@ export default function RegisterForm() {
             {errors.password && <FormError>{errors.password.message}</FormError>}
           </div>
 
-          <button className="cta-btn">{submitting ? "Signing up..." : "Sign up"}</button>
+          <button className="cta-btn marginTop10">{submitting ? "Signing up..." : "Sign up"}</button>
           <p>(Redirects to login page)</p>
         </fieldset>
       </form>

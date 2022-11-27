@@ -1,0 +1,34 @@
+.navbar {
+  max-width: 1200px;
+  height: 50px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0px 30px;
+  z-index: 5;
+}
+
+span {
+  padding: 0 10px;
+}
+
+.nav__links {
+  list-style: none;
+  margin: 0;
+}
+
+.nav__links li a:hover {
+  color: rgb(35, 35, 35, 0.8);
+  color: rgb(255, 255, 255);
+  color: #ffefdf;
+  text-decoration: none;
+}
+
+.toggle-icon {
+  display: none;
+}
+li .active {
+  color: white;
+  text-decoration: underline;
+}

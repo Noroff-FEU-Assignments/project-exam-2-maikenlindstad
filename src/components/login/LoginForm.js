@@ -61,7 +61,7 @@ export default function LoginForm() {
           <input {...register("password")} id="password" placeholder="Password" type="password" />
           {errors.password && <FormError>{errors.password.message}</FormError>}
         </div>
-        <button className="cta-btn">{submitting ? "Loggin in..." : "Login"}</button>
+        <button className="cta-btn marginTop10">{submitting ? "Loggin in..." : "Login"}</button>
       </fieldset>
     </form>
   );

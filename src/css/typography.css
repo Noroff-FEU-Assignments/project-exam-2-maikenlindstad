@@ -84,6 +84,18 @@ footer p {
 }
 
 .form-error {
-  color: rgb(66, 59, 103);
-  background-color: rgba(255, 255, 255, 0.484);
+  padding: 2px 5px;
+  color: white;
+  background-color: rgb(193, 101, 101);
+}
+
+.center {
+  text-align: center;
+}
+
+.softened {
+  color: rgba(255, 255, 255, 0.582);
+  font-size: 0.8rem;
+  max-width: 300px;
+  margin: 10px auto;
 }

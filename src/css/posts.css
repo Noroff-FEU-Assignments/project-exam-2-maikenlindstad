@@ -1,0 +1,133 @@
+/* POSTING SECTION  */
+
+/* POST CARDS  */
+.postCard {
+  max-width: 600px;
+  width: 100%;
+  margin: 30px auto 80px auto;
+  padding: 0 20px;
+}
+
+.avatar-section {
+  padding: 40px;
+  background-color: #1d1c1bb5;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  border-radius: 30px 0 0 0;
+  margin-right: 5px;
+  border: 3px solid #799dab;
+  cursor: pointer;
+}
+
+.postCard-head {
+  display: flex;
+  height: 20px;
+  justify-content: space-between;
+}
+
+.userInfo-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 20px;
+  width: 95%;
+  background-color: #1d1c1b;
+  border-radius: 0 30px 0 0;
+  border: 3px solid #799dab;
+}
+
+.postCard-body {
+  display: flex;
+  flex-direction: column;
+  background-color: #1d1c1b;
+  border: 3px solid #799dab;
+  border-radius: 0 0 50px 0;
+  padding: 20px;
+  margin-top: 70px;
+}
+
+.postCard-body img {
+  padding: 40px;
+}
+
+.profilePosts .postCard-body {
+  border-radius: 25px 25px 25px 0;
+}
+
+.comment {
+  margin: 10px 0;
+  background-color: #222120;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.552);
+}
+
+.commentBody {
+  margin-left: 5px;
+  background-color: rgb(42, 45, 47);
+  border-radius: 0px 5px 5px 5px;
+  padding: 5px;
+  display: inline-block;
+}
+
+.commentRespond {
+  display: flex;
+}
+
+.reactionField {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0 20px 0;
+}
+
+/* potential modal  */
+.editWrapper {
+  height: 100vh;
+  padding-top: 100px;
+  background-color: #1d1c1b93;
+}
+
+.editWrapper > div:nth-of-type(1) {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.reactions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 2px;
+}
+
+.reactions p {
+  margin: 0;
+  padding: 0;
+}
+
+.reactionSpan {
+  display: flex;
+  flex-direction: row;
+}
+
+.reactionSpan span {
+  padding: 0;
+}
+
+.reactionCount {
+  padding: 0 5px;
+}
+.heartLabel {
+  cursor: pointer;
+}
+.hearted {
+  color: white;
+}
+.heart {
+  color: red;
+}
+
+@media only screen and (max-width: 1079px) {
+  .post-card {
+    max-width: 550px;
+  }
+}

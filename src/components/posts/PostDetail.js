@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import PostComment from "./PostComment";
 import PostReaction from "./PostReaction";
 import { GoTrashcan, GoPencil } from "react-icons/go";
+import { FaRegThumbsUp, FaRegHeart, FaRegGrinTongueWink, FaRegGrinSquintTears, FaRegGrinHearts, FaRegGrinAlt } from "react-icons/fa";
 
 
 function PostDetails() {
@@ -19,12 +20,12 @@ function PostDetails() {
   const { id } = useParams();
   const { name } = useParams();
 
-
   if (!id) {
     navigation("/posts");
   }
 
   const url = API + POST_PATH + "/" + id + "?_author=true&_comments=true&_reactions=true";
+  const profilePictureDefault = "https://images.pexels.com/photos/3094799/pexels-photo-3094799.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
 
   useEffect(() => {
     async function fetchPostDetails() {
@@ -62,18 +63,17 @@ function PostDetails() {
 
   return (
     <>
-      <Link to={`../posts`}>
-        <p>Back</p>
+      <Link to={`../posts`} className="breadcrumbContainer-goBack">
+        <p class="breadcrumb" >Go back</p>
       </Link>
-      <div className="post-card">
+      <div className="postCard">
         <div className="postCard-head">
           <a href={`/profiles/detail/${name}`}>
-            <div className="avatar-section" style={{ backgroundImage: `url(${postDetails.author.avatar})` }}>
+            <div className="avatar-section" style={{ backgroundImage: `url(${postDetails.author.avatar ? postDetails.author.avatar : profilePictureDefault})` }}>
             </div>
           </a>
           <div className="userInfo-section">
             <h3>{postDetails.author.name} </h3>
-            {/* <PostReaction /> */}
           </div>
         </div>
 
@@ -84,19 +84,22 @@ function PostDetails() {
           <img src={postDetails.media} />
 
           <div className="reactionField">
-            <p>{postDetails._count.comments} comments</p>
-            <div key={id}>
-              {postDetails.reactions.map((reaction, id) => {
-                return (
-                  <span>{reaction.symbol}</span>
-                );
-              })}
+            <div>
+              <div key={id} className="reactionSpan">
+                {postDetails.reactions.map((reaction, id) => {
+                  return (
+                    <span>{reaction.symbol}</span>
+                  );
+                })}
+                <p className="reactionCount">{postDetails._count.reactions}</p>
+              </div>
+              <p>{postDetails._count.comments} comments</p>
+            </div>
+            <div>
+              <PostReaction />
             </div>
           </div>
 
-          <div>
-            <p>IF Read comments/ ELSE No comments:</p>
-          </div>
 
           <div className="comments">
             {postDetails.comments.map((comment, id) => {
@@ -110,8 +113,8 @@ function PostDetails() {
                           <p>{comment.body}</p>
                         </div>
                         <Link to={`../posts/edit/${id}/comment`}>
-                          <GoPencil />
-                          <GoTrashcan />
+                          {/* <GoPencil />
+                          <GoTrashcan /> */}
                         </Link>
 
                       </div>
@@ -130,6 +133,7 @@ function PostDetails() {
 
 
           </div>
+
           <div>
             <PostComment />
           </div>

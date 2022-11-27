@@ -1,6 +1,10 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { FiMoreHorizontal } from "react-icons/fi";
+// import { AiFillLike } from "react-icons/ai";
+import { FaRegThumbsUp, FaRegHeart, FaRegGrinTongueWink, FaRegGrinSquintTears, FaRegGrinHearts, FaRegGrinAlt } from "react-icons/fa";
+import { FcLike } from "react-icons/fc";
+import PostReaction from "./PostReaction";
 
 // Denne endrer på utseende til listen av poster 
 
@@ -9,7 +13,7 @@ const profilePictureDefault = "https://images.pexels.com/photos/3094799/pexels-p
 function PostItem({ id, title, body, media, created, updated, _count, comments, reactions, author, name }) {
   return (
     <>
-      <div className="post-card">
+      <div className="postCard">
         <div className="postCard-head">
           <Link to={`../profiles/detail/${author.name}`}>
             <div className="avatar-section" style={{ backgroundImage: `url(${author.avatar ? author.avatar : profilePictureDefault})` }}>
@@ -38,12 +42,14 @@ function PostItem({ id, title, body, media, created, updated, _count, comments, 
             <Link to={`detail/${id}`}>
               <p>{_count.comments} comments</p>
             </Link>
-            <Link to={`detail/${id}`}>
-              {/* <button onClick={() => this.setState({ liked: true })}>
-                Like
-              </button> */}
-              <p>🧡👍😂 {_count.reactions}</p>
-            </Link>
+            {/* <Link to={`detail/${id}`}> */}
+            <div className="reactions">
+              {/* <PostReaction /> */}
+              <p><FaRegHeart /></p>
+              <p>{_count.reactions}</p>
+            </div>
+            {/* <p>{_count.reactions}</p> */}
+            {/* </Link> */}
 
           </div>
 

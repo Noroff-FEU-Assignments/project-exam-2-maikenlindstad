@@ -84,11 +84,11 @@ export default function EditPostForm() {
         </div>
 
         <div>
-          <input type="text"  {...register("body")} defaultValue={post.body} id="body" placeholder="Write something" />
+          <textarea  {...register("body")} defaultValue={post.body} id="body" placeholder="Write something" />
           {errors.body && <FormError>{errors.body.message}</FormError>}
         </div>
 
-        <button>{updatingPost ? "Updating post..." : "Update"}</button>
+        <button className="cta-btn green marginTop10">{updatingPost ? "Updating post..." : "Update"}</button>
         <DeletePost id={post.id} />
       </fieldset>
     </form>

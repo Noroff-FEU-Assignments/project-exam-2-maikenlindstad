@@ -3,7 +3,7 @@ import AuthContext from "../../context/AuthContext";
 import ProfileItem from './ProfileItem'
 import { API, PROFILES_PATH } from '../../constants/api';
 
-const url = API + PROFILES_PATH + "?sortOrder=asc&limit=50&offset=0"
+const url = API + PROFILES_PATH + "?sortOrder=asc&limit=50&offset=550"
 
 function ProfileList() {
   const [profiles, setProfiles] = useState([]);

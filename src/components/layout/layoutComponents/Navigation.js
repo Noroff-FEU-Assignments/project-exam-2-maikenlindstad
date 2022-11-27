@@ -7,6 +7,7 @@ import { alignRight } from 'react-icons-kit/feather/alignRight'
 import { x } from 'react-icons-kit/feather/x'
 import { useParams } from 'react-router-dom';
 import { BiUser } from "react-icons/bi";
+import { AiOutlineRight } from "react-icons/ai";
 
 function Navigation() {
 
@@ -49,9 +50,8 @@ function Navigation() {
                 <li onClick={handleToggle}>
                   <NavLink to="/profiles">Contributors</NavLink>
                 </li>
-                <span>></span>
                 <li onClick={handleToggle}>
-                  <NavLink to={userUrl}>{auth.name}</NavLink>
+                  <NavLink to={userUrl}><AiOutlineRight />{auth.name}</NavLink>
                 </li>
                 <li onClick={handleToggle}>
                   <NavLink onClick={logout} className='cta-btn' to="/login">Logout</NavLink>

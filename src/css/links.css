@@ -1,0 +1,20 @@
+.breadcrumb {
+  padding: 10px;
+}
+
+.breadcrumbContainer,
+.breadcrumbContainer-goBack {
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+}
+
+.breadcrumbContainer {
+  justify-content: flex-end;
+}
+
+.breadcrumbContainer-goBack {
+  padding-top: 20px;
+  justify-content: flex-start;
+}

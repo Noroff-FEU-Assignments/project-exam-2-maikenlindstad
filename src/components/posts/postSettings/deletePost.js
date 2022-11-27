@@ -25,7 +25,7 @@ export default function DeletePost({ id }) {
   }
 
   return (
-    <button type="button" className="cta-btn" onClick={handleDelete}>
+    <button type="button" className="cta-btn marginTop10 red" onClick={handleDelete}>
       {error ? "Error" : "Delete"}
     </button>
   );

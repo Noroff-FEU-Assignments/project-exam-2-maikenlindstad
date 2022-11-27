@@ -41,41 +41,52 @@ export default function AddPostForm() {
       const response = await http.post(url, data);
       console.log("response", response.data);
       navigate("/posts");
+      window.location.reload(true);
     } catch (error) {
       console.log("Error: ", error);
       console.log(error.response)
       setServerError(error.toString());
     } finally {
       setSubmitting(false);
-      // window.location.reload(true);
 
     }
   }
 
   return (
-    <>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        {serverError && <FormError>{serverError}</FormError>}
-        <fieldset disabled={submitting}>
-          <div>
-            <input {...register("title")} id="title" placeholder="Title*" />
-            {errors.title && <FormError>{errors.title.message}</FormError>}
+    <div className="postCard">
+      <div className="postCard-head">
+        <a href={`/profiles/detail/${auth.name}`}>
+          <div className="avatar-section" style={{ backgroundImage: `url(${auth.avatar})` }}>
           </div>
+        </a>
+        <div className="userInfo-section">
+          <h3>{auth.name} </h3>
+        </div>
+      </div>
+      <div className="postCard-body">
+        <form onSubmit={handleSubmit(onSubmit)}>
+          {serverError && <FormError>{serverError}</FormError>}
+          <fieldset disabled={submitting}>
+            <div>
+              <input {...register("title")} id="title" placeholder="Title*" />
+              {errors.title && <FormError>{errors.title.message}</FormError>}
+            </div>
 
-          <div>
-            <input type="text"  {...register("body")} id="body" placeholder="Write something"></input>
-            {errors.body && <FormError>{errors.body.message}</FormError>}
-          </div>
+            <div>
+              <textarea   {...register("body")} id="body" placeholder="What a lovely day to share something you have created!" />
+              {errors.body && <FormError>{errors.body.message}</FormError>}
+            </div>
 
-          <div>
-            <input {...register("media")} id="media" placeholder="Image url" />
-            {errors.media && <FormError>{errors.media.message}</FormError>}
-          </div>
-          {/* <p>* Must have</p> */}
+            <div>
+              <input {...register("media")} id="media" placeholder="Image url" />
+              {errors.media && <FormError>{errors.media.message}</FormError>}
+            </div>
+            {/* <p>* Must have</p> */}
 
-          <button>{submitting ? "Adding post..." : "Post"}</button>
-        </fieldset>
-      </form>
-    </>
+            <button className="cta-btn marginTop10 green">{submitting ? "Adding post..." : "Post"}</button>
+          </fieldset>
+        </form>
+      </div>
+    </div >
   );
 }

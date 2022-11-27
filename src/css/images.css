@@ -4,3 +4,16 @@
   /* padding-right: 100px; */
   /* display: none; */
 }
+
+img {
+  width: 100%;
+  margin: 0 auto;
+}
+
+svg {
+  height: 30px;
+}
+
+.avatar-section img {
+  width: 100%;
+}

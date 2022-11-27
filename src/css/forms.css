@@ -1,19 +1,55 @@
-input {
+input,
+textarea {
   padding: 5px;
   margin: 2px 0;
   border: none;
   border-radius: 3px 3px 3px 0;
 }
 
-.loginRegisterSections .cta-btn {
-  margin-top: 10px;
+.postCard #title {
+  background-color: #a1c2cf;
+  color: black;
 }
 
 form {
   flex-direction: column-reverse;
-  align-items: center;
+  /* width: 100%; */
 }
 
-form .form-error {
+.loginRegisterSections form .form-error {
   max-width: 180px;
+}
+
+fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+fieldset button {
+  width: 100%;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+form input {
+  /* display: flex; */
+  /* justify-content: center; */
+  /* max-width: 1600px; */
+  /* padding: 20px; */
+  /* margin: 0 auto; */
+  max-width: 1000px;
+  width: 100%;
+}
+
+textarea {
+  display: flex;
+  justify-content: flex-end;
+  height: 50px;
+  width: 100%;
+}
+
+#heart {
+  display: none;
 }
