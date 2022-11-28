@@ -1,4 +1,5 @@
-export const API = process.env.REACT_APP_BASE_URL;
+export const API = "https://nf-api.onrender.com";
+console.log(API);
 export const REGISTER_PATH = "/api/v1/social/auth/register";
 export const LOGIN_PATH = "/api/v1/social/auth/login";
 export const POST_PATH = "/api/v1/social/posts"
