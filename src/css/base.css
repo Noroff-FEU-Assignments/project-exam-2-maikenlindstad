@@ -1,7 +1,7 @@
-body,
+/* body,
 html {
   scroll-behavior: smooth;
-}
+} */
 
 * {
   box-sizing: border-box;
@@ -10,13 +10,13 @@ html {
   font-size: 1rem;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 10px;
   /* color: white; */
-  height: 10px;
+  /* height: 10px; */
 }
 
-::-webkit-scrollbar-track {
+/* ::-webkit-scrollbar-track {
   background: var(--lightestgrey);
   transition: 0.4s;
 }
@@ -28,7 +28,7 @@ html {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #799dab;
-}
+}  */
 
 .wrapContent {
   max-width: 1000px;
