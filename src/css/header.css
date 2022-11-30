@@ -29,6 +29,10 @@ span {
   display: none;
 }
 li .active {
-  color: white;
+  /* color: white; */
   text-decoration: underline;
 }
+
+/* li a .cta-btn .active {
+  text-decoration: none;
+} */

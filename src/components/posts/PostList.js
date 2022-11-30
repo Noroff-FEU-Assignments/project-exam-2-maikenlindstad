@@ -39,6 +39,8 @@ function PostList() {
     getPosts();
   }, []);
 
+
+
   if (loading) {
     return <div>Loading...</div>;
   }
@@ -49,18 +51,17 @@ function PostList() {
 
 
 
+
   // Denne endrer på utseende til detaljene av postene
 
   return (
     <>
       {posts.map((post) => {
         const { id, title, body, media, created, updated, _count, comments, author, name, avatar } = post;
-        return <div>
-          <PostItem key={id} id={id} title={title}
-            body={body} media={media} created={created}
-            updated={updated} _count={_count} comments={comments} author={author} name={name}
-            avatar={avatar} />
-        </div>;
+        return <PostItem key={id} id={id} title={title}
+          body={body} media={media} created={created}
+          updated={updated} _count={_count} comments={comments} author={author} name={name}
+          avatar={avatar} />;
       })}
     </>
   );

@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { GoPencil } from "react-icons/go";
 import Follow from "./followers/Follow";
 import Unfollow from "./followers/Unfollow";
+import FollowBtn from "./followers/FollowBtn";
 
 
 function ProfileDetail() {
@@ -77,7 +78,11 @@ function ProfileDetail() {
       <div className="profileDataSection">
         <div className="profileData">
           <div>
-            <a href="/posts"><i class="fa-solid fa-chevron-left"></i></a>
+            {/* <form> */}
+            <button onClick={() => navigation(-1)}><i class='fa-solid fa-chevron-left' /></button>
+            {/* <input type="button" value=  /> */}
+            {/* </form> */}
+            {/* <a href="history.back()"></a> */}
             <span></span>
             {/* <a href="" className="active"><p>{profile.name}</p> </a> */}
           </div>
@@ -85,8 +90,9 @@ function ProfileDetail() {
             <h2>{profile.name}</h2>
           </div>
           <div>
-            <Follow />
-            <Unfollow />
+            {/* <Follow />
+            <Unfollow /> */}
+            <FollowBtn />
           </div>
         </div>
       </div>

@@ -17,9 +17,15 @@ function Navigation() {
 
   const userUrl = auth ? '/profiles/details/' + auth.name : "";
 
+
+
   function logout() {
-    setAuth(null);
-    navigate("/");
+    const confirmLogout = window.confirm("Are you sure you want to log out?");
+    if (confirmLogout) {
+      setAuth(null);
+      navigate("/login");
+    }
+
   }
 
   const [toggle, setToggle] = useState(false);
@@ -51,11 +57,9 @@ function Navigation() {
                   <NavLink to="/profiles">Contributors</NavLink>
                 </li>
                 <li onClick={handleToggle}>
-                  <NavLink to={userUrl}><AiOutlineRight />{auth.name}</NavLink>
+                  <NavLink to={userUrl} onClick="window.reload()"><AiOutlineRight />{auth.name}</NavLink>
                 </li>
-                <li onClick={handleToggle}>
-                  <NavLink onClick={logout} className='cta-btn' to="/login">Logout</NavLink>
-                </li>
+                <button onClick={logout} className='cta-btn'>Logout</button>
               </>
             ) : (
               <>

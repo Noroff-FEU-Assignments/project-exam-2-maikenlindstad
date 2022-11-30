@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -24,6 +25,7 @@ export default function EditPostForm() {
   const { register, handleSubmit, formState: { errors } } = useForm({
     resolver: yupResolver(schema),
   });
+  const navigate = useNavigate();
 
   const http = useAxios();
 
@@ -35,7 +37,7 @@ export default function EditPostForm() {
     async function getPost() {
       try {
         const response = await http.get(url);
-        console.log("The response I'm working with now: ", response.data);
+        // console.log("The response I'm working with now: ", response.data);
         setPost(response.data);
       } catch (error) {
         console.log(error);
@@ -54,12 +56,17 @@ export default function EditPostForm() {
     setUpdateError(null);
     setUpdated(false);
 
+
+
+
     console.log(data);
 
     try {
       const response = await http.put(url, data);
       console.log("The response: ", response.data);
       setUpdated(true);
+      navigate("/posts#" + id);
+
     } catch (error) {
       console.log("error", error);
       setUpdateError(error.toString());
@@ -71,6 +78,14 @@ export default function EditPostForm() {
   if (fetchingPost) return <div>Loading...</div>;
 
   if (fetchError) return <div>Error loading post</div>;
+
+  // const handleClickScroll = () => {
+  //   const element = document.getElementById('section-1');
+  //   if (element) {
+  //     // 👇 Will scroll smoothly to the top of the next section
+  //     element.scrollIntoView({ behavior: 'smooth' });
+  //   }
+  // };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>

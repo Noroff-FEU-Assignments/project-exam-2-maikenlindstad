@@ -68,7 +68,7 @@ function PostDetails() {
       </Link>
       <div className="postCard">
         <div className="postCard-head">
-          <a href={`/profiles/detail/${name}`}>
+          <a href={`/profiles/detail/${postDetails.author.name}`}>
             <div className="avatar-section" style={{ backgroundImage: `url(${postDetails.author.avatar ? postDetails.author.avatar : profilePictureDefault})` }}>
             </div>
           </a>
