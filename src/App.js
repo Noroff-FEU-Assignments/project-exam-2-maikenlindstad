@@ -6,6 +6,10 @@ import Layout from './components/layout/Layout';
 
 function App() {
 
+  useEffect(() => {
+    document.title = "NO.CO | Join the Noroff Community";
+  }, []);
+
   return (
     <div className="App">
       <Layout />

@@ -27,7 +27,9 @@ function ProfileDetail() {
   }
 
   const url = API + SINGLE_PROFILE_PATH + "/" + name + "?_followers=true&_following=true&_posts=true&_comments=true&_reactions=true";
-
+  useEffect(() => {
+    document.title = "NO.CO | Contributors | " + name;
+  }, []);
   useEffect(() => {
     async function fetchProfiles() {
       const options = {

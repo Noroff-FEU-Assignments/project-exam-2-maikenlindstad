@@ -53,6 +53,10 @@ function PostDetails() {
     fetchPostDetails();
   }, []);
 
+  useEffect(() => {
+    document.title = "NO.CO | Latest posts | Read, comment or react";
+  }, []);
+
   if (loading) {
     return <div>Loading...</div>;
   }

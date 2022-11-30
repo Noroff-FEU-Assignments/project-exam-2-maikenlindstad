@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import AuthContext from '../../../context/AuthContext';
@@ -17,15 +17,12 @@ function Navigation() {
 
   const userUrl = auth ? '/profiles/details/' + auth.name : "";
 
-
-
   function logout() {
     const confirmLogout = window.confirm("Are you sure you want to log out?");
     if (confirmLogout) {
       setAuth(null);
       navigate("/login");
     }
-
   }
 
   const [toggle, setToggle] = useState(false);

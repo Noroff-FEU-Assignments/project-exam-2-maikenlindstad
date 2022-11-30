@@ -12,6 +12,10 @@ function ProfileList() {
   const [auth, setAuth] = useContext(AuthContext);
 
   useEffect(() => {
+    document.title = "NO.CO | Contributors";
+  }, []);
+
+  useEffect(() => {
     async function getPeoples() {
       const options = {
         method: "GET",

@@ -1,21 +1,17 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-import axios from "axios";
 import FormError from "../common/FormError";
 import { API, REGISTER_PATH } from "../../constants/api";
-import AuthContext from "../../context/AuthContext";
 
 const url = API + REGISTER_PATH;
-const regex = /^\w+([-+.']\w+)*@?(stud.noroff.no|noroff.no)$/;
-//Endre regex koden.
 
 const schema = yup.object().shape({
-  name: yup.string().required("Please enter a username"),
-  email: yup.string().required("Please enter your email.").email().matches(regex, "You must be a student/teacher of Noroff"),
-  password: yup.string().required("Please enter your password"),
+  name: yup.string().required("Please enter your name").matches(/^[a-zA-Z0-9_]+$/, "Only _ (underscore) is allowed"),
+  email: yup.string().required("Please enter an email address").matches(/^[a-zA-Z]+[a-zA-Z0-9_.]+@+(\bstud.noroff.no|noroff.no)$/, "Please enter your provided Noroff email"),
+  password: yup.string().required("Please select a password").min(8, "Enter at least 8 characters"),
 });
 
 export default function RegisterForm() {
@@ -28,13 +24,10 @@ export default function RegisterForm() {
     resolver: yupResolver(schema),
   });
 
-  // const [auth, setAuth] = useContext(AuthContext);
 
   async function onSubmit(data) {
     setSubmitting(true);
     setRegisterError(null);
-
-    // console.log(data);
 
     const formData = JSON.stringify(data);
 
@@ -45,7 +38,6 @@ export default function RegisterForm() {
         "Content-Type": "application/json"
       },
     }
-
 
     try {
       const response = await fetch(url, options);
@@ -66,7 +58,8 @@ export default function RegisterForm() {
     <>
       <form onSubmit={handleSubmit(onSubmit)}>
         {registerError && <FormError>{registerError}</FormError>}
-        <fieldset disabled={submitting}>
+        <fieldset>
+
           <div>
             <input {...register("name")} id="name" placeholder="Enter a username" />
             {errors.name && <FormError>{errors.name.message}</FormError>}
@@ -84,6 +77,7 @@ export default function RegisterForm() {
 
           <button className="cta-btn marginTop10">{submitting ? "Signing up..." : "Sign up"}</button>
           <p>(Redirects to login page)</p>
+
         </fieldset>
       </form>
     </>

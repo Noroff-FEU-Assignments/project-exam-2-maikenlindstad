@@ -12,8 +12,8 @@ const url = API + LOGIN_PATH;
 console.log("URL:" + url);
 
 const schema = yup.object().shape({
-  email: yup.string().required("Please enter your username"),
-  password: yup.string().required("Please enter your password"),
+  email: yup.string().required("Please enter your email").email("Please enter your provided Noroff email"),
+  password: yup.string().required("Please type password"),
 });
 
 export default function LoginForm() {
@@ -50,8 +50,10 @@ export default function LoginForm() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      {loginError && <FormError>{loginError}</FormError>}
-      <fieldset disabled={submitting}>
+
+      {loginError && <FormError>Something went wrong. Try again.</FormError>}
+
+      <fieldset>
         <div>
           <input {...register("email")} id="email" placeholder="Email" />
           {errors.email && <FormError>{errors.email.message}</FormError>}
@@ -61,7 +63,9 @@ export default function LoginForm() {
           <input {...register("password")} id="password" placeholder="Password" type="password" />
           {errors.password && <FormError>{errors.password.message}</FormError>}
         </div>
+
         <button className="cta-btn marginTop10">{submitting ? "Loggin in..." : "Login"}</button>
+
       </fieldset>
     </form>
   );

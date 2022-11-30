@@ -3,9 +3,13 @@ import PostList from './PostList';
 import { Link } from 'react-router-dom';
 import AddPostForm from '../posts/AddPostForm'
 import ScrollToTopBtn from '../common/ScrollToTopBtn';
+import { useEffect } from 'react';
 
 
 export default function Posts() {
+  useEffect(() => {
+    document.title = "NO.CO | Latest posts";
+  }, []);
   return (
     <>
       <div className='wrapContent'>
