@@ -85,7 +85,7 @@ function PostDetails() {
           <h3>{postDetails.title}</h3>
           <p>{postDetails.created}</p>
           <p>{postDetails.body}</p>
-          <img src={postDetails.media} />
+          <img src={postDetails.media} alt={postDetails.media} />
 
           <div className="reactionField">
             <div>

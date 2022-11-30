@@ -11,9 +11,6 @@ import ScrollToId from "../common/ScrollToId";
 
 // Denne endrer på utseende til listen av poster 
 
-
-
-
 const profilePictureDefault = "https://images.pexels.com/photos/3094799/pexels-photo-3094799.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
 function PostItem({ id, title, body, media, created, updated, _count, comments, reactions, author, name }) {
 
@@ -43,7 +40,7 @@ function PostItem({ id, title, body, media, created, updated, _count, comments, 
           <p>{created}</p>
           {/* <p>{updated}</p> */}
           <p>{body}</p>
-          <img src={media} />
+          <img src={media} alt={media} />
 
           <div className="reactionField">
             <Link to={`detail/${id}`}>

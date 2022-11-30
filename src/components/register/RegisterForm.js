@@ -56,7 +56,7 @@ export default function RegisterForm() {
 
   return (
     <>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form className="beforeLoginForm" onSubmit={handleSubmit(onSubmit)}>
         {registerError && <FormError>{registerError}</FormError>}
         <fieldset>
 

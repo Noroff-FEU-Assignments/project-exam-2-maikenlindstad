@@ -137,16 +137,8 @@ function ProfileDetail() {
                       {/* <h4>{profilePost.title}</h4> */}
                       <p>{profilePost.created}</p>
                       <p>{profilePost.body}</p>
-                      <img src={profilePost.media} />
+                      <img src={profilePost.media} alt={profilePost.media} />
                       <p>Post comment/View comments</p>
-                      {/* <div className="reactionField">
-                        <Link to={`detail/${id}`}>
-                          <p>{profilePost._count.comments} comments</p>
-                        </Link>
-                        <Link to={`detail/${id}`}>
-                          <p>🧡👍😂 {profilePost._count.reactions}</p>
-                        </Link>
-                      </div> */}
                     </div>
                   </div>
                 );

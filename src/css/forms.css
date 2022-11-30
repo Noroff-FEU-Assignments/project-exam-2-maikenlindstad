@@ -14,6 +14,9 @@ textarea {
 form {
   flex-direction: column-reverse;
   /* width: 100%; */
+}
+
+.beforeLoginForm {
   display: flex;
   justify-content: stretch;
   align-items: center;

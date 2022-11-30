@@ -49,7 +49,7 @@ export default function LoginForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form class="beforeLoginForm" onSubmit={handleSubmit(onSubmit)}>
 
       {loginError && <FormError>Something went wrong. Try again.</FormError>}
 
