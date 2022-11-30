@@ -8,6 +8,7 @@ import { x } from 'react-icons-kit/feather/x'
 import { useParams } from 'react-router-dom';
 import { BiUser } from "react-icons/bi";
 import { AiOutlineRight } from "react-icons/ai";
+import { AiFillCaretDown, AiFillCaretRight } from "react-icons/ai";
 
 function Navigation() {
 
@@ -53,20 +54,24 @@ function Navigation() {
                 <li onClick={handleToggle}>
                   <NavLink to="/profiles">Contributors</NavLink>
                 </li>
+                <span><AiFillCaretDown className='smallDevice' /><AiFillCaretRight className='largeDevice' /></span>
                 <li onClick={handleToggle}>
-                  <NavLink to={userUrl} onClick="window.reload()"><AiOutlineRight />{auth.name}</NavLink>
+                  <NavLink to={userUrl} onClick="window.reload()">{auth.name}</NavLink>
                 </li>
                 <button onClick={logout} className='cta-btn'>Logout</button>
               </>
             ) : (
               <>
-                {/* <li onClick={handleToggle} className="loginSection">
-                  <p>Already have an account?</p>
-                  <NavLink to="/login">Login instead</NavLink>
-                </li> */}
-                {/* <li onClick={handleToggle}>
+                <li onClick={handleToggle} className="loginSection">
+                  <NavLink className='cta-btn' to="/login">Login</NavLink>
+                </li>
+                <li onClick={handleToggle}>
                   <NavLink className='cta-btn' to="/register">Register</NavLink>
-                </li> */}
+                </li>
+                <li>
+                  <p>At NO.CO we are all contributors. Send your images to some email adress to get them featured on the site.
+                  </p>
+                </li>
               </>
             )}
           </ul>

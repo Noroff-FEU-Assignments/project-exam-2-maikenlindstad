@@ -139,3 +139,13 @@ a {
 .changePageButton {
   padding: 20px;
 }
+
+@media only screen and (max-width: 789px) {
+  .cta-btn {
+    padding: 5px;
+  }
+
+  .cta-follow {
+    padding: 5px;
+  }
+}

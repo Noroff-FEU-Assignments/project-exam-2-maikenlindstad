@@ -89,13 +89,16 @@ function ProfileDetail() {
             {/* <a href="" className="active"><p>{profile.name}</p> </a> */}
           </div>
           <div>
-            <h2>{profile.name}</h2>
+            <h2 className="largeDevice">{profile.name}</h2>
           </div>
           <div>
             {/* <Follow />
             <Unfollow /> */}
             <FollowBtn />
           </div>
+        </div>
+        <div>
+          <h2 className="smallDevice profileData profileData__name" >{profile.name}</h2>
         </div>
       </div>
       <div className="profileWrapper">
@@ -115,18 +118,24 @@ function ProfileDetail() {
         </div>
 
         <div className="profileContent">
+          <div><h3>About me</h3></div>
           <div className="additionalProfileInformation">
-            <h3>About me</h3>
-            <p>Hello! I am a junior frontend developer who is super excited to get to work and start developing
-              real projects for real world clients!</p>
-            <p> I have already submitted my application and portfolio
-              to Facebook, Google, Instagram and Twitter and am just waiting for the call!</p>
-            <p>I definitely believe Meta will be in touch. </p>
-          </div>
-          <div className="profilePosts">
 
-            <h3>Posts</h3>
             <div>
+
+              <p>Hello! I am a junior frontend developer who is super excited to get to work and start developing
+                real projects for real world clients!</p>
+              <p> I have already submitted my application and portfolio
+                to Facebook, Google, Instagram and Twitter and am just waiting for the call!</p>
+              <p>I definitely believe Meta will be in touch. </p>
+            </div>
+          </div>
+
+          <div>
+            <div><h3>Posts</h3></div>
+            <div className="profilePosts">
+
+
               {profile.posts.map((profilePost, id) => {
                 return (
                   <div key={id} className="post-card" >
@@ -143,9 +152,8 @@ function ProfileDetail() {
                   </div>
                 );
               })}
-            </div>
 
-          </div>
+            </div></div>
         </div>
       </div>
     </div >

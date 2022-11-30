@@ -99,3 +99,9 @@ footer p {
   max-width: 300px;
   margin: 10px auto;
 }
+
+@media only screen and (max-width: 798px) {
+  .profileContent h3 {
+    padding: 10px;
+  }
+}

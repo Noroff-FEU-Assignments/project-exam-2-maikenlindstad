@@ -17,3 +17,8 @@ svg {
 .avatar-section img {
   width: 100%;
 }
+
+.welcomeSection img {
+  height: auto;
+  margin: 20px;
+}

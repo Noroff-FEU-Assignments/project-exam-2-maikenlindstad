@@ -83,7 +83,7 @@
   padding: 0 30px;
 }
 .profileCards {
-  width: 180px;
+  width: 160px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -146,6 +146,7 @@
   grid-template-columns: 30% 70%;
   border-left: #596b72 3px solid;
   border-right: #596b72 3px solid;
+  display: flex;
 }
 
 .additionalProfileInformation {
@@ -153,6 +154,8 @@
   padding: 10px;
   height: 200px;
   border-radius: 10px 10px 10px 0;
+  max-width: 250px;
+  margin: 0 5px;
 }
 
 .profilePosts {
@@ -161,26 +164,33 @@
   overflow: auto;
 }
 
+.profilePosts .postCard-body {
+  margin: 20px 0 40px 0;
+}
+
 .followWrapper {
   display: flex;
 }
 
 @media only screen and (max-width: 1079px) {
-  .profilePicture {
-    height: 180px;
-  }
+  /* .profilePicture {
+    height: 200px;
+  } */
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 798px) {
   .profileSection {
     gap: 0;
     padding: 0;
   }
 
-  .profileCards {
-    width: 150px;
+  /* .profileCards {
+    width: 140px;
+  } */
+  .additionalProfileInformation {
+    max-width: 100%;
+    height: auto;
   }
-
   .user {
     border-top: rgb(0, 0, 0) 1px solid;
     margin-top: 100px;
@@ -188,5 +198,34 @@
 
   .user i {
     padding-top: 50px;
+  }
+
+  .profileContent {
+    flex-direction: column;
+    padding: 0;
+  }
+  .profileData {
+    margin-bottom: 0;
+  }
+  .profileData__name {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 5px;
+  }
+}
+
+@media only screen and (max-width: 429px) {
+  .followWrapper {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+  }
+
+  .profileWrapper {
+    margin: 0 15px;
+  }
+
+  .postCard-body img {
+    padding: 2px;
   }
 }
