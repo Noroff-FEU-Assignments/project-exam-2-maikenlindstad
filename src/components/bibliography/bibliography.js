@@ -17,4 +17,10 @@
 
 // https://www.youtube.com/watch?v=SEecAgV1-Ro
 
-// https://www.youtube.com/watch?v=91qEdc6dSUs 
+// https://www.youtube.com/watch?v=91qEdc6dSUs
+
+// https://devdojo.com/krissanawat101/3-ways-to-set-a-document-title-in-react
+
+// https://developer.spotify.com/documentation/general/design-and-branding/
+
+// https://www.greengeeks.ca/blog/html-tags-for-seo/
