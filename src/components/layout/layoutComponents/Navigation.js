@@ -9,6 +9,7 @@ import { useParams } from 'react-router-dom';
 import { BiUser } from "react-icons/bi";
 import { AiOutlineRight } from "react-icons/ai";
 import { AiFillCaretDown, AiFillCaretRight } from "react-icons/ai";
+import { RiLogoutBoxRLine, RiArrowRightSFill, RiArrowLeftSFill, RiUser3Line, RiArrowDropRightLine, RiTwitterFill, RiTwitterLine, RiDiscordFill } from "react-icons/ri";
 
 function Navigation() {
 
@@ -54,11 +55,17 @@ function Navigation() {
                 <li onClick={handleToggle}>
                   <NavLink to="/profiles">Contributors</NavLink>
                 </li>
-                <span><AiFillCaretDown className='smallDevice' /><AiFillCaretRight className='largeDevice' /></span>
-                <li onClick={handleToggle}>
-                  <NavLink to={userUrl} onClick="window.reload()">{auth.name}</NavLink>
+                {/* <span><AiFillCaretDown className='smallDevice' /><AiFillCaretRight className='largeDevice' /></span> */}
+                <span className='largeDevice'><RiArrowRightSFill /></span>
+                {/* <span><AiFillCaretDown className='smallDevice' /><AiFillCaretRight className='largeDevice' /></span> */}
+                <li className='userSection' onClick={handleToggle}>
+                  {/* <NavLink to={userUrl} onClick="window.reload()">{auth.name}<RiUser3Line /></NavLink> */}
+                  <NavLink to={userUrl} onClick="window.reload()"><RiUser3Line /></NavLink>
+
+                  <NavLink onClick={logout}><RiLogoutBoxRLine /></NavLink>
+                  {/* <div onClick={logout}><RiLogoutCircleRLine /></div> */}
                 </li>
-                <button onClick={logout} className='cta-btn'>Logout</button>
+                {/* <button onClick={logout} className='cta-btn'>Logout</button> */}
               </>
             ) : (
               <>

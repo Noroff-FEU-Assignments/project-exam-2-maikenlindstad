@@ -4,16 +4,35 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bentham&display=swap");
 
+/* Logo  */
+.logo {
+  margin-right: auto;
+  font-family: var(--paragraph);
+}
+
+.logo:hover {
+  text-decoration: none;
+  color: var(--parchment-white);
+}
+
+/* Global  */
+
 p,
 h1,
 h2,
+h3,
+h4,
+h5,
 i {
-  color: white;
+  color: var(--parchment-white);
 }
 
-p {
-  font-family: "Playfair Display", serif;
-  font-size: 1rem;
+/* Headings  */
+
+h1 {
+  font-size: var(--large-font-size);
+  margin: 0;
+  text-transform: uppercase;
 }
 
 h1,
@@ -24,50 +43,35 @@ h1,
 
 h2 {
   text-transform: uppercase;
-  font-weight: 400;
-  font-size: 1.8rem;
+  font-size: var(--large-font-size);
+  font-weight: 500;
   z-index: 1;
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--heading);
   padding: 0 5px;
 }
 
 h3 {
   font-family: "Montserrat", sans-serif;
-  font-family: "Playfair Display", serif;
-  font-weight: 500;
-}
-
-.logo h1 {
-  font-size: 1rem;
-  margin: 0;
-  text-transform: uppercase;
-}
-
-h3 {
-  color: white;
-}
-
-h4 {
-  font-weight: 500;
-  color: white;
+  font-family: var(--heading);
+  font-weight: 800;
+  color: var(--parchment-white);
 }
 
 .followWrapper h3 {
   padding: 0 15px 15px 15px;
 }
 
-.profileName h3 {
-  font-size: 0.9rem;
+h4 {
+  font-weight: 800;
+  color: var(--parchment-white);
+  font-family: (--paragraph);
+  font-size: var(--medium-font-size);
 }
 
-.profilePictureSection a {
-  font-size: 0.7rem;
-  opacity: 0.5;
-}
+/* Paragraphs  */
 
-.profilePictureSection a:hover {
-  transition: 0.2s;
-  opacity: 1;
+p {
+  font-family: var(--paragraph);
 }
 
 .commentRespond p {
@@ -80,13 +84,108 @@ h4 {
 }
 
 footer p {
-  color: white;
-  font-size: 0.8rem;
+  color: var(--parchment-white);
+}
+
+li {
+  font-weight: 800;
+}
+
+a,
+.cta-btn,
+.cta-follow {
+  font-weight: 500;
+}
+
+.cta-btn,
+.cta-btn-follow,
+.cta-follow {
+  font-family: var(--paragraph);
+}
+
+.cta-btn,
+.cta-follow {
+  color: var(--feather-black);
+}
+
+.cta-btn:hover {
+  color: var(--feather-black);
+}
+
+.cta-follow {
+  color: var(--parchment-white);
+}
+
+.welcomeSection a {
+  font-family: var(--paragraph);
+}
+
+Link,
+a {
+  color: var(--parchment-white);
+}
+
+.postCard #title {
+  color: var(--feather-black);
+}
+
+form input {
+  color: var(--feather-black);
+  font-family: var(--paragraph);
+  font-weight: 800;
+}
+
+span,
+.nav__links li a {
+  font-family: var(--heading);
+  /* font-weight: 500; */
+}
+
+::placeholder {
+  font-family: var(--paragraph);
+  font-weight: 200;
+}
+
+textarea {
+  color: var(--feather-black);
+  font-family: var(--paragraph);
+  font-weight: 800;
+}
+
+.nav__links {
+  list-style: none;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.nav__links li a {
+  font-size: var(--small-font-size);
+  padding: 5px;
+  border-radius: 5px 5px 5px 0;
+  border: 1px solid var(--base-blue);
+}
+
+.nav__links li a:hover {
+  transition: 0.4s;
+  color: var(--parchment-white);
+  border: 1px solid var(--parchment-white);
+  text-decoration: none;
+
+  /* background-color: var(--feather-black); */
+}
+
+.profilePictureSection a {
+  opacity: 0.5;
+}
+
+.profilePictureSection a:hover {
+  transition: 0.2s;
+  opacity: 1;
 }
 
 .form-error {
   padding: 2px 5px;
-  color: white;
+  color: var(--parchment-white);
   background-color: rgb(193, 101, 101);
 }
 
@@ -95,10 +194,13 @@ footer p {
 }
 
 .softened {
-  color: rgba(255, 255, 255, 0.582);
-  font-size: 0.8rem;
-  max-width: 300px;
   margin: 10px auto;
+}
+
+.softened,
+.timestamp {
+  color: rgba(255, 255, 255, 0.582);
+  max-width: 400px;
 }
 
 @media only screen and (max-width: 798px) {

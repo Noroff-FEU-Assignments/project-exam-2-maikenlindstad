@@ -1,0 +1,18 @@
+:root {
+  /* Base  */
+  --base-blue: #799dab;
+  --lighter-blue: #a9c0ca;
+
+  /* Typography */
+  --parchment-white: #fff3e8;
+  --feather-black: #1d1c1b;
+  --light-feather-black: #363636;
+  --heading: "Montserrat", sans-serif;
+  --paragraph: "Playfair Display", serif;
+  --small-font-size: 1.025rem;
+  --medium-font-size: 1.3rem;
+  --large-font-size: 1.675rem;
+
+  /* Spacing  */
+  --extra-margin: 10px;
+}

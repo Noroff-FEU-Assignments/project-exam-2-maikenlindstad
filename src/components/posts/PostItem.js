@@ -9,10 +9,14 @@ import { FcLike } from "react-icons/fc";
 import PostReaction from "./PostReaction";
 import ScrollToId from "../common/ScrollToId";
 
+// Date date = (Date)formatter.parse(start_dt);
+
 // Denne endrer på utseende til listen av poster 
 
 const profilePictureDefault = "https://images.pexels.com/photos/3094799/pexels-photo-3094799.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
 function PostItem({ id, title, body, media, created, updated, _count, comments, reactions, author, name }) {
+  const timeCreated = Date(created);
+  const timestamp = timeCreated.substring(4, timeCreated.length - 38);
 
   return (
     <>
@@ -25,7 +29,7 @@ function PostItem({ id, title, body, media, created, updated, _count, comments, 
           </Link>
           <div className="userInfo-section">
             <Link to={`../profiles/detail/${author.name}`}>
-              <h4>{author.name} </h4>
+              <h3>{author.name} </h3>
             </Link>
             <Link to={`../posts/edit/${id}`}>
               <FiMoreHorizontal />
@@ -35,9 +39,9 @@ function PostItem({ id, title, body, media, created, updated, _count, comments, 
 
         <div className="postCard-body">
           <Link to={`detail/${id}`}>
-            <h3>{title}</h3>
+            <h4>{title}</h4>
           </Link>
-          <p>{created}</p>
+          <p className="timestamp">{timestamp}</p>
           {/* <p>{updated}</p> */}
           <p>{body}</p>
           <img src={media} alt={media} />
@@ -49,7 +53,7 @@ function PostItem({ id, title, body, media, created, updated, _count, comments, 
             {/* <Link to={`detail/${id}`}> */}
             <div className="reactions">
               {/* <PostReaction /> */}
-              <p><FaRegHeart /></p>
+              <p>❤️</p>
               <p>{_count.reactions}</p>
             </div>
             {/* <p>{_count.reactions}</p> */}

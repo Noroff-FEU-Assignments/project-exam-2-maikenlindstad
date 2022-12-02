@@ -8,6 +8,8 @@ import { GoPencil } from "react-icons/go";
 import Follow from "./followers/Follow";
 import Unfollow from "./followers/Unfollow";
 import FollowBtn from "./followers/FollowBtn";
+import { RiLogoutBoxRLine, RiArrowRightSFill, RiArrowLeftSFill, RiUser3Line, RiArrowDropRightLine, RiTwitterFill, RiTwitterLine, RiDiscordFill } from "react-icons/ri";
+
 
 
 function ProfileDetail() {
@@ -81,7 +83,7 @@ function ProfileDetail() {
         <div className="profileData">
           <div>
             {/* <form> */}
-            <button onClick={() => navigation(-1)}><i class='fa-solid fa-chevron-left' /></button>
+            <button onClick={() => navigation(-1)}><RiArrowLeftSFill /></button>
             {/* <input type="button" value=  /> */}
             {/* </form> */}
             {/* <a href="history.back()"></a> */}

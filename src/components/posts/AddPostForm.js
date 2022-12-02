@@ -7,6 +7,7 @@ import useAxios from '../../hooks/useAxios'
 import FormError from "../common/FormError";
 import { API, CREATE_POST_PATH } from "../../constants/api";
 import AuthContext from "../../context/AuthContext";
+import { BsCardImage } from "react-icons/bs";
 
 const url = API + CREATE_POST_PATH;
 console.log("URL:" + url);
@@ -14,8 +15,6 @@ console.log("URL:" + url);
 const schema = yup.object().shape({
   title: yup.string().required("Please enter a title")
 });
-
-
 
 export default function AddPostForm() {
   const [submitting, setSubmitting] = useState(false);
@@ -68,7 +67,7 @@ export default function AddPostForm() {
           {serverError && <FormError>{serverError}</FormError>}
           <fieldset disabled={submitting}>
             <div>
-              <input {...register("title")} id="title" placeholder="Title*" />
+              <input {...register("title")} id="title" placeholder="Title" />
               {errors.title && <FormError>{errors.title.message}</FormError>}
             </div>
 
@@ -78,7 +77,7 @@ export default function AddPostForm() {
             </div>
 
             <div>
-              <input {...register("media")} id="media" placeholder="Image url" />
+              <input {...register("media")} id="media" placeholder="Copy + paste img url" />
               {errors.media && <FormError>{errors.media.message}</FormError>}
             </div>
             {/* <p>* Must have</p> */}

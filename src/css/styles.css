@@ -1,3 +1,4 @@
+@import "colors.css";
 @import "base.css";
 @import "typography.css";
 @import "images.css";
@@ -25,7 +26,7 @@
 
   .navbar.expanded {
     height: 100vh;
-    background-color: #799dab;
+    background-color: var(--base-blue);
   }
 
   header {
@@ -42,16 +43,11 @@
     justify-content: center;
     align-items: center;
   }
-  .welcome__section h2,
-  h2 {
-    font-size: 1.6rem;
-  }
 
   li,
   .cta-btn,
   .cta-follow {
     margin: 15px 0;
-    font-size: 1rem;
   }
 
   .navbar {
@@ -74,14 +70,14 @@
     left: 22px;
   }
 
-  .toggle-icon {
+  /* .toggle-icon {
     cursor: pointer;
     display: block;
     position: absolute;
     top: 28px;
     right: 22px;
-    color: #303030;
-  }
+    color: var(--feather-black);
+  } */
 
   .nav__links {
     display: none;

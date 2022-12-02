@@ -1,8 +1,6 @@
 .previewImg {
   margin: 10px 0;
   height: 600px;
-  /* padding-right: 100px; */
-  /* display: none; */
 }
 
 img {
@@ -11,8 +9,23 @@ img {
 }
 
 svg {
-  height: 30px;
+  color: var(--parchment-white);
 }
+
+.postCard svg {
+  font-size: var(--medium-font-size);
+}
+
+/* .userSection svg {
+  background-color: var(--feather-black);
+  padding: 1px;
+  color: var(--parchment-white);
+} */
+
+/* .userSection svg:hover {
+  padding: 2px;
+  color: var(--parchment-white);
+} */
 
 .avatar-section img {
   width: 100%;

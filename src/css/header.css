@@ -13,29 +13,14 @@ span {
   padding: 0 10px;
 }
 
-.nav__links {
-  list-style: none;
-  margin: 0;
-}
-
-.nav__links li a:hover {
-  color: rgb(35, 35, 35, 0.8);
-  color: rgb(255, 255, 255);
-  color: #ffefdf;
-  text-decoration: none;
-}
-
 .toggle-icon {
   display: none;
 }
-li .active {
-  /* color: white; */
-  text-decoration: underline;
-}
 
-/* li a .cta-btn .active {
-  text-decoration: none;
-} */
+li .active {
+  text-decoration: underline;
+  border: 1px solid var(--parchment-white);
+}
 
 .smallDevice {
   display: none;

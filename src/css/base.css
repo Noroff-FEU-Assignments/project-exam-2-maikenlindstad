@@ -2,28 +2,29 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-size: 1rem;
+  font-size: var(--small-font-size);
+  font-family: var(--paragraph);
+  color: var(--parchment-white);
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 10px;
-  /* color: white; */
   height: 10px;
-}
+} */
 
-::-webkit-scrollbar-track {
-  background: var(--lightestgrey);
-  /* transition: 0.4s; */
-}
+/* ::-webkit-scrollbar-track {
+  background: var(--light-feather-black);
+} */
 
-::-webkit-scrollbar-thumb {
+/* ::-webkit-scrollbar-thumb {
   background: #657277;
   border-radius: 5px 5px 5px 0;
-}
+} */
 
-::-webkit-scrollbar-thumb:hover {
-  background: #799dab;
-}
+/* ::-webkit-scrollbar-thumb:hover {
+  background: var(--light-feather-black);
+  background: var(--base-blue);
+} */
 
 .wrapContent {
   max-width: 1000px;
@@ -37,8 +38,6 @@
 }
 
 body {
-  background-color: #141414;
-  color: #ffefdf;
   background-image: linear-gradient(
       90deg,
       rgba(0, 0, 0, 0),
@@ -57,7 +56,7 @@ main {
 }
 
 .beforeLogin {
-  background-color: #799dab;
+  background-color: var(--base-blue);
   height: 100vh;
 }
 
@@ -72,7 +71,7 @@ main {
   display: flex;
   align-items: flex-end;
   padding: 25px;
-  border: white solid 5px;
+  border: solid 5px var(--parchment-white);
   border-radius: 20px 20px 20px 0;
   gap: 10px;
 }
@@ -96,9 +95,8 @@ main {
 .loginRegisterSections > div:nth-of-type(1) {
   margin: 10px;
   height: 70vh;
-  border: 5px solid white;
+  border: 5px solid var(--parchment-white);
   border-radius: 25px 25px 25px 0;
-  /* padding: 20px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -107,8 +105,7 @@ main {
 }
 
 header {
-  background-color: #799dab;
-  /* margin-bottom: 40px; */
+  background-color: var(--base-blue);
   z-index: 200;
   height: 50px;
 }

@@ -7,8 +7,7 @@ textarea {
 }
 
 .postCard #title {
-  background-color: #a1c2cf;
-  color: black;
+  background-color: var(--lighter-blue);
 }
 
 form {
@@ -40,16 +39,18 @@ fieldset button {
 }
 
 form input {
-  /* display: flex; */
-  /* justify-content: center; */
-  /* max-width: 1600px; */
-  /* padding: 20px; */
-  /* margin: 0 auto; */
+  background-color: var(--parchment-white);
   max-width: 1000px;
   width: 100%;
 }
 
+::placeholder {
+  color: var(--feather-black);
+  opacity: 0.75;
+}
+
 textarea {
+  background-color: var(--parchment-white);
   display: flex;
   justify-content: flex-end;
   height: 50px;

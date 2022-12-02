@@ -2,65 +2,48 @@ li,
 a,
 .cta-btn,
 .cta-follow {
-  font-weight: 400;
-  font-size: 1rem;
-  color: rgb(35, 35, 35, 1);
   text-decoration: none;
-}
-
-.cta-btn,
-.cta-btn-follow,
-.cta-follow {
-  font-family: "Montserrat", sans-serif;
-  font-family: "Playfair Display", serif;
-  font-size: 1rem;
 }
 
 .cta-btn:hover,
 .cta-follow:hover {
   text-decoration: none;
-  color: black;
+  color: var(--feather-black);
 }
 
 .nav__links .cta-btn:hover {
-  color: rgb(35, 35, 35, 0.8);
-  color: rgb(0, 0, 0);
   text-decoration: none;
 }
 
 .cta-btn,
 .cta-follow {
   padding: 5px 25px;
-  /* background-color: rgb(255, 255, 255, 0.8); */
-  /* background-color: #ffe1c6b1; */
-  background-color: white;
+  background-color: var(--parchment-white);
   border-radius: 50px 50px 50px 0;
   cursor: pointer;
   transition: all 0.3s ease 0s;
-  color: #141414;
 }
 
 .cta-btn:hover {
-  background-color: rgba(255, 255, 255);
-  background-color: #ffefdf;
-  color: black;
+  background-color: var(--parchment-white);
 }
 
 .cta-follow {
   background-color: #ffe1c600;
-  color: white;
-  border: 1px solid white;
+  border: 1px solid var(--parchment-white);
 }
 
 .cta-follow:hover {
-  background-color: #ffe1c6;
-  border: 1px solid #ffe1c6;
+  background-color: var(--parchment-white);
+  border: 1px solid var(--parchment-white);
+}
+
+li svg {
+  margin: 0 5px;
 }
 
 .welcomeSection a {
   text-decoration: underline;
-  font-size: 1rem;
-  font-family: "Playfair Display", serif;
 }
 
 .welcomeSection a:hover {
@@ -69,11 +52,6 @@ a,
 
 .welcomeSection .cta-btn {
   text-decoration: none;
-}
-
-Link,
-a {
-  color: white;
 }
 
 .nav__links li {
@@ -90,7 +68,6 @@ a {
   width: 40px;
   height: 40px;
   padding: 5px;
-  /* border-radius: 100px; */
   border-radius: 5px 5px 5px 0;
 }
 
@@ -113,9 +90,8 @@ a {
   bottom: 25px;
   right: 20%;
   width: 40px;
-  font-size: 1rem;
   height: 40px;
-  font-size: 3rem;
+  /* font-size: var(--small-font); */
   border-radius: 25px;
 }
 

@@ -24,7 +24,7 @@
   height: 200px;
   width: 200px;
   border-radius: 25px 25px 25px 0;
-  border: 5px solid #799dab;
+  border: 5px solid var(--base-blue);
   background-position-y: center;
   background-color: #7b878c;
   background-position-x: center;
@@ -35,9 +35,9 @@
 }
 
 .profileDataSection {
-  border-bottom: solid #799dab 2px;
+  border-bottom: solid 2px var(--base-blue);
   padding: 0;
-  background-color: #1d1c1b;
+  background-color: var(--feather-black);
 }
 
 .profileData {
@@ -82,6 +82,7 @@
   gap: 10px;
   padding: 0 30px;
 }
+
 .profileCards {
   width: 160px;
   display: flex;
@@ -95,7 +96,7 @@
 
 .profileCards:hover {
   transition: 0.2s;
-  border: 4px solid #799dab;
+  border: 4px solid var(--base-blue);
   cursor: pointer;
 }
 
@@ -103,7 +104,7 @@
   width: 100%;
   height: 230px;
   border-radius: 20px 20px 0 0;
-  background-color: rgb(96, 55, 55);
+  /* background-color: rgb(96, 55, 55); */
   background-color: #102c32;
   /* opacity: 0.8; */
   background-size: cover;
@@ -117,7 +118,7 @@
   border-radius: 0 0 20px 0;
   background-color: rgba(0, 0, 0, 0.721);
   background-size: cover;
-  color: #ffe2c6;
+  color: var(--parchment-white);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -125,7 +126,7 @@
 }
 
 .profilePictureSection {
-  background-color: #1d1c1b;
+  background-color: var(--feather-black);
   max-width: 1000px;
   margin: 0px auto;
   padding: 20px 0;
@@ -139,7 +140,7 @@
 
 .profileContent {
   max-width: 1000px;
-  background-color: #1d1c1b;
+  background-color: var(--feather-black);
   margin: 0px auto;
   padding: 20px;
   display: grid;
@@ -150,9 +151,9 @@
 }
 
 .additionalProfileInformation {
-  background-color: #222120;
+  background-color: var(--light-feather-black);
   padding: 10px;
-  height: 200px;
+  height: 100%;
   border-radius: 10px 10px 10px 0;
   max-width: 250px;
   margin: 0 5px;
@@ -191,14 +192,14 @@
     max-width: 100%;
     height: auto;
   }
-  .user {
+  /* .user {
     border-top: rgb(0, 0, 0) 1px solid;
     margin-top: 100px;
   }
 
   .user i {
     padding-top: 50px;
-  }
+  } */
 
   .profileContent {
     flex-direction: column;
