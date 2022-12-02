@@ -18,7 +18,7 @@ export default function Posts() {
         <p className="center softened">Hint! Send your images to some email adress to get them featured as background images on NO.CO</p>
         <h2 className="center">The Community</h2>
         <PostList />
-        {/* <ScrollToTopBtn /> */}
+        <ScrollToTopBtn />
       </div>
     </>
   );

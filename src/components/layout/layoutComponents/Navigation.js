@@ -62,7 +62,7 @@ function Navigation() {
               </>
             ) : (
               <>
-                <li onClick={handleToggle} className="loginSection">
+                {/* <li onClick={handleToggle} className="loginSection">
                   <NavLink className='cta-btn' to="/login">Login</NavLink>
                 </li>
                 <li onClick={handleToggle}>
@@ -71,7 +71,7 @@ function Navigation() {
                 <li>
                   <p>At NO.CO we are all contributors. Send your images to some email adress to get them featured on the site.
                   </p>
-                </li>
+                </li> */}
               </>
             )}
           </ul>
