@@ -24,3 +24,5 @@
 // https://developer.spotify.com/documentation/general/design-and-branding/
 
 // https://www.greengeeks.ca/blog/html-tags-for-seo/
+
+// https://www.colorpsychology.org/teal/
