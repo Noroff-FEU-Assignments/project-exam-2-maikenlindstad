@@ -5,7 +5,7 @@ import LoginForm from './LoginForm';
 export default function Login() {
   return (
     <>
-      <div className="beforeLogin">
+      <div className="beforeLoginWrapper">
         <div className='loginRegisterSections'>
           <div>
             <Heading title="Login" />

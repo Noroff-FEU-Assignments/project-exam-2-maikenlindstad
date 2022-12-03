@@ -1,85 +1,8 @@
-@import "colors.css";
+@import "root.css";
 @import "base.css";
 @import "typography.css";
 @import "images.css";
-@import "buttons.css";
+@import "links.css";
 @import "forms.css";
 @import "posts.css";
-@import "logo.css";
 @import "profiles.css";
-@import "header.css";
-@import "links.css";
-
-/* .right {
-  border-radius: 50px 0px 50px 50px;
-} */
-
-/* .profileData > div:nth-of-type(1) {
-  display: flex;
-} */
-
-@media only screen and (max-width: 768px) {
-  .navbar {
-    position: relative;
-    transition: 0.5s height ease-in-out;
-  }
-
-  .navbar.expanded {
-    height: 100vh;
-    background-color: var(--base-blue);
-  }
-
-  header {
-    height: 80px;
-  }
-
-  .navbar.expanded .nav__links {
-    position: absolute;
-    top: 120px;
-    left: 0;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  li,
-  .cta-btn,
-  .cta-follow {
-    margin: 15px 0;
-  }
-
-  .navbar {
-    z-index: 2;
-    /* position: fixed; */
-  }
-
-  main {
-    z-index: 1;
-  }
-
-  .nav__links {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-
-  .logo h1 {
-    position: absolute;
-    top: 28px;
-    left: 22px;
-  }
-
-  .toggle-icon {
-    cursor: pointer;
-    display: block;
-    position: absolute;
-    top: 28px;
-    right: 22px;
-    color: var(--feather-black);
-  }
-
-  .nav__links {
-    display: none;
-  }
-}

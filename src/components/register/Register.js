@@ -3,7 +3,7 @@ import RegisterForm from './RegisterForm';
 
 export default function Register() {
   return (
-    <div className="beforeLogin">
+    <div className="beforeLoginWrapper">
       <div className='loginRegisterSections'>
         <div>
           <Heading title="Sign up" />

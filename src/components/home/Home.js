@@ -3,14 +3,14 @@ import preview from '../../images/preview.png';
 
 export default function Home() {
   return (
-    <div className="beforeLogin">
+    <div className="beforeLoginWrapper">
       <div className='welcomeSection'>
         <div>
           <img src={preview} className="previewImg" alt="Preview image." />
         </div>
         <div className='welcomeSection__information'>
           <Heading title="Join the Noroff Community!" />
-          <div className='beforeLogin__cardSection'>
+          <div className='beforeLogin__borderedSection'>
             <a href="/register" className='cta-btn'>Sign up today</a>
             <p>Already have an account?</p><a href="/login"> Go to Login</a>
           </div>

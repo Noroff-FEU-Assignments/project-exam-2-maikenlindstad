@@ -56,7 +56,7 @@ function Navigation() {
                   <NavLink to="/profiles">Contributors</NavLink>
                 </li>
                 {/* <span><AiFillCaretDown className='smallDevice' /><AiFillCaretRight className='largeDevice' /></span> */}
-                <span className='largeDevice'><RiArrowRightSFill /></span>
+                <span className='navigationSpan largeDevice'><RiArrowRightSFill /></span>
                 {/* <span><AiFillCaretDown className='smallDevice' /><AiFillCaretRight className='largeDevice' /></span> */}
                 <li className='userSection' onClick={handleToggle}>
                   {/* <NavLink to={userUrl} onClick="window.reload()">{auth.name}<RiUser3Line /></NavLink> */}

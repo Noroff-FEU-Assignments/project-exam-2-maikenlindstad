@@ -94,8 +94,8 @@ function ProfileDetail() {
             <FollowBtn />
           </div>
         </div>
-        <div>
-          <h2 className="smallDevice profileData profileData__name" >{profile.name}</h2>
+        <div className="smallDevice">
+          <h2 className="profileData profileData__name" >{profile.name}</h2>
         </div>
       </div>
       <div className="profileWrapper">
