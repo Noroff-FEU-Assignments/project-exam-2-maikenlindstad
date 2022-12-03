@@ -10,7 +10,6 @@ import { FaRegThumbsUp, FaRegHeart, FaRegGrinTongueWink, FaRegGrinSquintTears, F
 import { FcLike } from "react-icons/fc";
 import PostReaction from "./PostReaction";
 import ScrollToId from "../common/ScrollToId";
-import { propTypes } from "react-bootstrap/esm/Image";
 
 // Date date = (Date)formatter.parse(start_dt);
 
