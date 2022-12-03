@@ -1,22 +1,10 @@
-input,
+.beforeLoginForm,
+fieldset,
 textarea {
-  padding: 5px;
-  margin: 2px 0;
-  border: none;
-  border-radius: 3px 3px 3px 0;
-}
-
-.postCard #title {
-  background-color: var(--lighter-blue);
-}
-
-form {
-  flex-direction: column-reverse;
-  /* width: 100%; */
+  display: flex;
 }
 
 .beforeLoginForm {
-  display: flex;
   justify-content: stretch;
   align-items: center;
 }
@@ -25,44 +13,69 @@ form {
   max-width: 180px;
 }
 
-fieldset {
-  border: none;
-  display: flex;
-  flex-direction: column;
-  margin: 20px;
-}
-
 .profile fieldset {
   margin: 0;
 }
 
-fieldset button {
+fieldset,
+input,
+textarea {
+  border: none;
+}
+
+input,
+textarea {
+  padding: 5px;
+  margin: 2px 0;
+  border-radius: 3px 3px 3px 0;
+}
+
+form {
+  flex-direction: column-reverse;
+}
+
+fieldset {
+  flex-direction: column;
+  margin: 20px;
+}
+
+fieldset button,
+form input,
+textarea {
   width: 100%;
+}
+
+fieldset button {
   margin: 0 auto;
   cursor: pointer;
 }
 
-form input {
+form input,
+textarea {
   background-color: var(--parchment-white);
-  max-width: 1000px;
-  width: 100%;
 }
+
+form input {
+  max-width: 1000px;
+}
+
+textarea {
+  justify-content: flex-end;
+  height: 60px;
+}
+
+/* 
+#heart {
+  display: none;
+} */
 
 ::placeholder {
   color: var(--feather-black);
   opacity: 0.75;
 }
 
-textarea {
-  background-color: var(--parchment-white);
-  display: flex;
-  justify-content: flex-end;
-  height: 50px;
-  width: 100%;
-}
-
-#heart {
-  display: none;
+.postCard #title {
+  background-color: var(--lighter-blue);
 }
 
 #banner {
