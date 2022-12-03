@@ -50,16 +50,20 @@ export default function AddPostForm() {
 
     }
   }
+  const profilePictureDefault = "https://images.pexels.com/photos/3094799/pexels-photo-3094799.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
+
 
   return (
     <div className="postCard">
       <div className="postCard-head">
         <a href={`/profiles/detail/${auth.name}`}>
-          <div className="avatar-section" style={{ backgroundImage: `url(${auth.avatar})` }}>
+          <div className="avatar-section" style={{ backgroundImage: `url(${auth.avatar ? auth.avatar : profilePictureDefault})` }}>
           </div>
         </a>
         <div className="userInfo-section">
-          <h3>{auth.name} </h3>
+          <a href={`/profiles/detail/${auth.name}`}>
+            <h3>{auth.name} </h3>
+          </a>
         </div>
       </div>
       <div className="postCard-body">

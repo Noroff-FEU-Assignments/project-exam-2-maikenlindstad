@@ -83,7 +83,7 @@ function PostDetails() {
 
         <div className="postCard-body">
           <h3>{postDetails.title}</h3>
-          <p>{postDetails.created}</p>
+          <p className="timestamp">{postDetails.created}</p>
           <p>{postDetails.body}</p>
           <img src={postDetails.media} alt={postDetails.media} />
 

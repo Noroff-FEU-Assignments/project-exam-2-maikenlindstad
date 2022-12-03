@@ -61,24 +61,15 @@ function Navigation() {
                 <li className='userSection' onClick={handleToggle}>
                   {/* <NavLink to={userUrl} onClick="window.reload()">{auth.name}<RiUser3Line /></NavLink> */}
                   <NavLink to={userUrl} onClick="window.reload()"><RiUser3Line /></NavLink>
-
-                  <NavLink onClick={logout}><RiLogoutBoxRLine /></NavLink>
+                </li>
+                <li>
+                  <NavLink to="/login" onClick={logout}><RiLogoutBoxRLine /></NavLink>
                   {/* <div onClick={logout}><RiLogoutCircleRLine /></div> */}
                 </li>
                 {/* <button onClick={logout} className='cta-btn'>Logout</button> */}
               </>
             ) : (
               <>
-                {/* <li onClick={handleToggle} className="loginSection">
-                  <NavLink className='cta-btn' to="/login">Login</NavLink>
-                </li>
-                <li onClick={handleToggle}>
-                  <NavLink className='cta-btn' to="/register">Register</NavLink>
-                </li>
-                <li>
-                  <p>At NO.CO we are all contributors. Send your images to some email adress to get them featured on the site.
-                  </p>
-                </li> */}
               </>
             )}
           </ul>

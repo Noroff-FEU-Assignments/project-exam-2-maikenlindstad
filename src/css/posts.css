@@ -51,6 +51,11 @@
   padding: 20px 5px;
 }
 
+.postCard-body div {
+  display: flex;
+  justify-content: space-between;
+}
+
 .profilePosts .postCard-body {
   border-radius: 25px 25px 25px 0;
 }

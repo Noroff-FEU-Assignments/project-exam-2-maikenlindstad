@@ -99,7 +99,7 @@ export default function EditPostForm() {
         </div>
 
         <div>
-          <textarea  {...register("body")} defaultValue={post.body} id="body" placeholder="Write something" />
+          <textarea  {...register("body")} defaultValue={post.body} id="body" />
           {errors.body && <FormError>{errors.body.message}</FormError>}
         </div>
 

@@ -102,8 +102,16 @@ li svg {
 .green {
   background-color: rgb(177, 224, 177);
 }
+
+.green:hover {
+  background-color: rgb(134, 183, 134);
+}
 .red {
-  background-color: rgb(224, 177, 177);
+  background-color: var(--delete-error-red);
+}
+
+.red:hover {
+  background-color: #a95e5e;
 }
 
 .pageBtn {

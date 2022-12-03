@@ -11,7 +11,6 @@ function ProfileItem({ name, email, avatar }) {
         </div>
         <div className="profileName">
           <h3>{name}</h3>
-          <p>Frontend Developer</p>
         </div>
       </div>
     </Link>

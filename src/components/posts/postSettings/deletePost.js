@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import { useNavigate } from "react-router-dom";
 import useAxios from "../../../hooks/useAxios";
 import { POST_PATH } from "../../../constants/api";
+import { RiDeleteBinFill } from "react-icons/ri";
+
 
 export default function DeletePost({ id }) {
   const [error, setError] = useState(null);
@@ -26,7 +28,7 @@ export default function DeletePost({ id }) {
 
   return (
     <button type="button" className="cta-btn marginTop10 red" onClick={handleDelete}>
-      {error ? "Error" : "Delete"}
+      {error ? "Deleting..." : <RiDeleteBinFill />}
     </button>
   );
 }

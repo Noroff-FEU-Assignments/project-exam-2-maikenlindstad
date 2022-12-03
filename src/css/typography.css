@@ -42,12 +42,12 @@ h1,
 }
 
 h2 {
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-size: var(--large-font-size);
   font-weight: 500;
   z-index: 1;
   font-family: var(--heading);
-  padding: 0 5px;
+  /* padding: 0 5px; */
 }
 
 h3 {
@@ -57,15 +57,11 @@ h3 {
   color: var(--parchment-white);
 }
 
-.followWrapper h3 {
-  padding: 0 15px 15px 15px;
-}
-
 h4 {
   font-weight: 800;
   color: var(--parchment-white);
   font-family: (--paragraph);
-  font-size: var(--medium-font-size);
+  font-size: var(--small-font-size);
 }
 
 /* Paragraphs  */
@@ -82,7 +78,9 @@ p {
 .commentRespond p:hover {
   text-decoration: underline;
 }
-
+.followWrapper p {
+  padding: 0 15px 15px 15px;
+}
 footer p {
   color: var(--parchment-white);
 }
@@ -129,10 +127,13 @@ a {
   color: var(--feather-black);
 }
 
+#title {
+  font-weight: 800;
+}
+
 form input {
   color: var(--feather-black);
   font-family: var(--paragraph);
-  font-weight: 800;
 }
 
 span,
@@ -149,7 +150,7 @@ span,
 textarea {
   color: var(--feather-black);
   font-family: var(--paragraph);
-  font-weight: 800;
+  /* font-weight: 800; */
 }
 
 .nav__links {
@@ -175,7 +176,7 @@ textarea {
 }
 
 .profilePictureSection a {
-  opacity: 0.5;
+  opacity: 0.8;
 }
 
 .profilePictureSection a:hover {
@@ -195,6 +196,10 @@ textarea {
 
 .softened {
   margin: 10px auto;
+}
+
+.timestamp {
+  font-size: --xsmall-font-size;
 }
 
 .softened,

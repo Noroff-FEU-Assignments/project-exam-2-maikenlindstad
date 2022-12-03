@@ -1,5 +1,6 @@
 .breadcrumb {
   padding: 10px;
+  cursor: pointer;
 }
 
 .breadcrumbContainer,

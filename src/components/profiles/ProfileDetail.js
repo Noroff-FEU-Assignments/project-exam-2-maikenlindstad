@@ -69,33 +69,28 @@ function ProfileDetail() {
     return <div>An error occured: {error}</div>;
   }
 
+
   const profilePictureDefault = "https://images.pexels.com/photos/3094799/pexels-photo-3094799.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
   const noBanner = "https://images.pexels.com/photos/2156881/pexels-photo-2156881.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
+
 
   return (
     <div className="profile">
       <div className="profileBanner" style={{ backgroundImage: `url(${profile.banner ? profile.banner : noBanner})` }}>
         <Link to={`/profiles/edit/banner/${name}`}>
-          <span><GoPencil color="grey" size="20px" /></span>
+          <span><GoPencil className="pencil" /></span>
         </Link>
       </div>
       <div className="profileDataSection">
         <div className="profileData">
-          <div>
-            {/* <form> */}
-            <button onClick={() => navigation(-1)}><RiArrowLeftSFill /></button>
-            {/* <input type="button" value=  /> */}
-            {/* </form> */}
-            {/* <a href="history.back()"></a> */}
-            <span></span>
-            {/* <a href="" className="active"><p>{profile.name}</p> </a> */}
+          <div className="breadcrumb" onClick={() => navigation(-1)}>
+            <button><RiArrowLeftSFill /></button>
+            <p>Go back</p>
           </div>
           <div>
             <h2 className="largeDevice">{profile.name}</h2>
           </div>
           <div>
-            {/* <Follow />
-            <Unfollow /> */}
             <FollowBtn />
           </div>
         </div>
@@ -104,41 +99,38 @@ function ProfileDetail() {
         </div>
       </div>
       <div className="profileWrapper">
-
         <div className="profilePictureSection">
           <div className="followWrapper">
-            <h3>{profile._count.posts} Posts</h3>
-            <h3>{profile._count.following} Following</h3>
-            <h3>{profile._count.followers} Followers</h3>
+            <p>{profile._count.posts} Posts</p>
+            <p>{profile._count.following} Following</p>
+            <p>{profile._count.followers} Followers</p>
           </div>
           <div className="profilePictureInfo" style={{ backgroundImage: `url(${profile.avatar ? profile.avatar : profilePictureDefault})` }}>
             <Link to={`/profiles/edit/avatar/${name}`}>
-              <span><GoPencil color="grey" size="20px" /></span>
+              <span><GoPencil className="pencil" /></span>
             </Link>
           </div>
-          <a style={{ color: `white` }} href="">{profile.email}</a>
+          <a style={{ color: `var(--parchment-white)`, fontWeight: 100 }} href="">{profile.email}</a>
         </div>
 
         <div className="profileContent">
-          <div><h3>About me</h3></div>
           <div className="additionalProfileInformation">
-
-            <div>
-
+            <div><h2>About me</h2></div>
+            <div className="marginTop10">
               <p>Hello! I am a junior frontend developer who is super excited to get to work and start developing
-                real projects for real world clients!</p>
-              <p> I have already submitted my application and portfolio
-                to Facebook, Google, Instagram and Twitter and am just waiting for the call!</p>
-              <p>I definitely believe Meta will be in touch. </p>
+                real projects for real world clients! I have already submitted my application and portfolio
+                to Facebook, Google, Instagram and Twitter and am just waiting for the call!
+                I definitely believe Meta will be in touch. </p>
             </div>
           </div>
 
           <div>
-            <div><h3>Posts</h3></div>
+            <div><h2>Posts</h2></div>
             <div className="profilePosts">
 
 
               {profile.posts.map((profilePost, id) => {
+
                 return (
                   <div key={id} className="post-card" >
                     <div className="postCard-body">
@@ -146,10 +138,13 @@ function ProfileDetail() {
                         <h4>{profilePost.title}</h4>
                       </Link>
                       {/* <h4>{profilePost.title}</h4> */}
-                      <p>{profilePost.created}</p>
+                      <p className="timestamp">{profilePost.created.substring(0, profilePost.created.length - 8).replace('T', ' ')}</p>
                       <p>{profilePost.body}</p>
                       <img src={profilePost.media} alt={profilePost.media} />
-                      <p>Post comment/View comments</p>
+                      <div>
+                        <p>Comment section</p>
+                        <p>Reaction section</p>
+                      </div>
                     </div>
                   </div>
                 );

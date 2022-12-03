@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -30,6 +30,8 @@ export default function EditBannerForm() {
 
   const url = PROFILES_PATH + `/` + name;
 
+  const navigate = useNavigate();
+
   useEffect(function () {
     async function getBanner() {
       try {
@@ -59,6 +61,9 @@ export default function EditBannerForm() {
       const response = await http.put(url + "/media", data);
       console.log("The Banner response: ", response.data);
       setUpdated(true);
+      // navigation(-1);
+      navigate(-1)
+
     } catch (error) {
       console.log("error", error);
       setUpdateError(error.toString());
@@ -78,7 +83,7 @@ export default function EditBannerForm() {
 
       <fieldset disabled={updatingBanner}>
         <div>
-          <input {...register("banner")} defaultValue={banner.banner} id="banner" />
+          <input {...register("banner")} id="banner" placeholder="Insert url" />
           {errors.banner && <FormError>{errors.banner.message}</FormError>}
         </div>
 

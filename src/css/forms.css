@@ -32,6 +32,10 @@ fieldset {
   margin: 20px;
 }
 
+.profile fieldset {
+  margin: 0;
+}
+
 fieldset button {
   width: 100%;
   margin: 0 auto;
@@ -59,4 +63,8 @@ textarea {
 
 #heart {
   display: none;
+}
+
+#banner {
+  text-align: center;
 }

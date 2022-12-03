@@ -7,6 +7,14 @@
   color: var(--parchment-white);
 }
 
+button {
+  font-size: var(--small-font-size);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
 /* ::-webkit-scrollbar {
   width: 10px;
   height: 10px;

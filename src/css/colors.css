@@ -2,6 +2,7 @@
   /* Base  */
   --base-blue: #799dab;
   --lighter-blue: #a9c0ca;
+  --delete-error-red: #c78383;
 
   /* Typography */
   --parchment-white: #fff3e8;
@@ -9,6 +10,7 @@
   --light-feather-black: #363636;
   --heading: "Montserrat", sans-serif;
   --paragraph: "Playfair Display", serif;
+  --xsmall-font-size: 0.8rem;
   --small-font-size: 1.025rem;
   --medium-font-size: 1.3rem;
   --large-font-size: 1.675rem;

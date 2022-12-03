@@ -3,11 +3,14 @@ import { Link } from "react-router-dom";
 import { FiMoreHorizontal } from "react-icons/fi";
 import { useState, useEffect, useContext, useRef } from "react";
 
+
+
 // import { AiFillLike } from "react-icons/ai";
 import { FaRegThumbsUp, FaRegHeart, FaRegGrinTongueWink, FaRegGrinSquintTears, FaRegGrinHearts, FaRegGrinAlt } from "react-icons/fa";
 import { FcLike } from "react-icons/fc";
 import PostReaction from "./PostReaction";
 import ScrollToId from "../common/ScrollToId";
+import { propTypes } from "react-bootstrap/esm/Image";
 
 // Date date = (Date)formatter.parse(start_dt);
 
@@ -15,8 +18,8 @@ import ScrollToId from "../common/ScrollToId";
 
 const profilePictureDefault = "https://images.pexels.com/photos/3094799/pexels-photo-3094799.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
 function PostItem({ id, title, body, media, created, updated, _count, comments, reactions, author, name }) {
-  const timeCreated = Date(created);
-  const timestamp = timeCreated.substring(4, timeCreated.length - 38);
+  const timeCreated = created.substring(0, created.length - 8);
+  const timestamp = timeCreated.replace('T', ' ')
 
   return (
     <>
@@ -79,6 +82,7 @@ PostItem.propTypes = {
   _count: PropTypes.number.isRequired,
   comments: PropTypes.string.isRequired,
   reactions: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired
 };
 
 export default PostItem;

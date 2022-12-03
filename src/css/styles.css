@@ -70,14 +70,14 @@
     left: 22px;
   }
 
-  /* .toggle-icon {
+  .toggle-icon {
     cursor: pointer;
     display: block;
     position: absolute;
     top: 28px;
     right: 22px;
     color: var(--feather-black);
-  } */
+  }
 
   .nav__links {
     display: none;
