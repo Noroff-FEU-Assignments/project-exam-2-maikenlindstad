@@ -9,10 +9,6 @@ textarea {
   align-items: center;
 }
 
-.loginRegisterSections form .form-error {
-  max-width: 180px;
-}
-
 .profile fieldset {
   margin: 0;
 }
@@ -39,10 +35,15 @@ fieldset {
   margin: 20px;
 }
 
+form,
 fieldset button,
 form input,
 textarea {
   width: 100%;
+}
+
+.loginRegisterSections form .form-error {
+  max-width: 180px;
 }
 
 fieldset button {
@@ -64,10 +65,9 @@ textarea {
   height: 60px;
 }
 
-/* 
 #heart {
   display: none;
-} */
+}
 
 ::placeholder {
   color: var(--feather-black);

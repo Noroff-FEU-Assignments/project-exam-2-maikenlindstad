@@ -116,7 +116,7 @@ function ProfileDetail() {
         <div className="profileContent">
           <div className="additionalProfileInformation">
             <div><h2>About me</h2></div>
-            <div className="marginTop10">
+            <div>
               <p>Hello! I am a junior frontend developer who is super excited to get to work and start developing
                 real projects for real world clients! I have already submitted my application and portfolio
                 to Facebook, Google, Instagram and Twitter and am just waiting for the call!
@@ -124,7 +124,7 @@ function ProfileDetail() {
             </div>
           </div>
 
-          <div>
+          <div className="profileContent__postSection">
             <div><h2>Posts</h2></div>
             <div className="profilePosts">
 
@@ -139,9 +139,9 @@ function ProfileDetail() {
                       </Link>
                       {/* <h4>{profilePost.title}</h4> */}
                       <p className="timestamp">{profilePost.created.substring(0, profilePost.created.length - 8).replace('T', ' ')}</p>
-                      <p>{profilePost.body}</p>
+                      <p className="marginTop20">{profilePost.body}</p>
                       <img src={profilePost.media} alt={profilePost.media} />
-                      <div>
+                      <div className="reactionField">
                         <p>Comment section</p>
                         <p>Reaction section</p>
                       </div>

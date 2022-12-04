@@ -67,7 +67,7 @@ export default function PostComment() {
             {errors.body && <FormError>{errors.body.message}</FormError>}
           </div>
 
-          <button>{submitting ? "Commenting..." : "Send comment"}</button>
+          <button className="cta-btn marginTop10 green">{submitting ? "Commenting..." : "Send comment"}</button>
         </fieldset>
       </form>
     </>

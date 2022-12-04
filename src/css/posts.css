@@ -1,16 +1,23 @@
-/* POSTING SECTION  */
+.editWrapper > div:nth-of-type(1),
+.postCard {
+  width: 100%;
+}
 
-/* .postWrapper {
-  max-width: 1000px;
-  margin: 40px auto;
-} */
-
-/* POST CARDS  */
 .postCard {
   max-width: 650px;
-  width: 100%;
   margin: 30px auto 80px auto;
   padding: 0 20px;
+}
+
+.avatar-section,
+.userInfo-section,
+.postCard-body {
+  border: 3px solid var(--base-blue);
+}
+
+.heartLabel,
+.avatar-section {
+  cursor: pointer;
 }
 
 .avatar-section {
@@ -21,44 +28,57 @@
   background-position-x: center;
   border-radius: 30px 0 0 0;
   margin-right: 5px;
-  border: 3px solid var(--base-blue);
-  cursor: pointer;
+}
+.postCard-head,
+.userInfo-section,
+.postCard-body div,
+.postCard-body,
+.commentRespond,
+.reactionField,
+.reactions,
+.reactionSpan {
+  display: flex;
+}
+
+.reactionField,
+.postCard-head,
+.userInfo-section {
+  justify-content: space-between;
 }
 
 .postCard-head {
-  display: flex;
   height: 20px;
-  justify-content: space-between;
+}
+
+.userInfo-section,
+.reactions {
+  align-items: center;
+}
+
+.userInfo-section,
+.postCard-body {
+  background-color: var(--feather-black);
 }
 
 .userInfo-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 40px 20px;
   width: 95%;
-  background-color: var(--feather-black);
   border-radius: 0 30px 0 0;
-  border: 3px solid var(--base-blue);
+}
+
+.comments,
+.comment,
+.postCard-body,
+.reactions,
+.comment > div:nth-of-type(1),
+.reactionField div {
+  flex-direction: column;
 }
 
 .postCard-body {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--feather-black);
-  border: 3px solid var(--base-blue);
   border-radius: 0 0 50px 0;
   padding: 20px;
   margin-top: 70px;
-}
-
-.postCard-body img {
-  padding: 20px 5px;
-}
-
-.postCard-body div {
-  display: flex;
-  justify-content: space-between;
 }
 
 .profilePosts .postCard-body {
@@ -78,17 +98,15 @@
   display: inline-block;
 }
 
-.commentRespond {
-  display: flex;
-}
-
 .reactionField {
-  display: flex;
-  justify-content: space-between;
   padding: 10px 0 20px 0;
 }
 
-/* potential modal  */
+div.reactionSpan {
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
 .editWrapper {
   height: 100vh;
   padding-top: 100px;
@@ -97,25 +115,11 @@
 
 .editWrapper > div:nth-of-type(1) {
   max-width: 600px;
-  width: 100%;
   margin: 0 auto;
 }
 
 .reactions {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   margin: 0 2px;
-}
-
-.reactions p {
-  margin: 0;
-  padding: 0;
-}
-
-.reactionSpan {
-  display: flex;
-  flex-direction: row;
 }
 
 .reactionSpan span {
@@ -124,15 +128,6 @@
 
 .reactionCount {
   padding: 0 5px;
-}
-.heartLabel {
-  cursor: pointer;
-}
-.hearted {
-  color: var(--parchment-white);
-}
-.heart {
-  color: red;
 }
 
 @media only screen and (max-width: 1079px) {

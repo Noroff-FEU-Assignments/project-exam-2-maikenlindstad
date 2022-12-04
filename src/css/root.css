@@ -3,6 +3,7 @@
   --base-blue: #799dab;
   --lighter-blue: #a9c0ca;
   --delete-error-red: #c78383;
+  --confirm-green: #c5ebc5;
 
   /* Typography */
   --parchment-white: #fff3e8;
@@ -38,4 +39,8 @@ button {
 
 .marginTop10 {
   margin-top: 10px;
+}
+
+.marginTop20 {
+  margin-top: 20px;
 }

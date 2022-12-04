@@ -1,34 +1,27 @@
-.previewImg {
-  margin: 10px 0;
-  height: 600px;
-}
-
 img {
   width: 100%;
   margin: 0 auto;
+}
+
+li svg {
+  margin: 0 5px;
 }
 
 svg {
   color: var(--parchment-white);
 }
 
+.previewImg {
+  margin: 10px 0;
+  height: 600px;
+}
+
 .postCard svg {
   font-size: var(--medium-font-size);
 }
 
-/* .userSection svg {
-  background-color: var(--feather-black);
-  padding: 1px;
-  color: var(--parchment-white);
-} */
-
-/* .userSection svg:hover {
-  padding: 2px;
-  color: var(--parchment-white);
-} */
-
-.avatar-section img {
-  width: 100%;
+.postCard-body img {
+  padding: 20px 5px;
 }
 
 .welcomeSection img {

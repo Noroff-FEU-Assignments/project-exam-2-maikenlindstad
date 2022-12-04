@@ -188,7 +188,7 @@ li .active {
 
   .smallDevice,
   .toggle-icon {
-    display: block;
+    display: inline-block;
   }
 
   .largeDevice,
@@ -219,7 +219,6 @@ li .active {
   }
 
   li,
-  .cta-btn,
   .cta-follow {
     margin: 15px 0;
   }

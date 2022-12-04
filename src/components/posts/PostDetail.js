@@ -7,7 +7,8 @@ import PostComment from "./PostComment";
 import PostReaction from "./PostReaction";
 import { GoTrashcan, GoPencil } from "react-icons/go";
 import { FaRegThumbsUp, FaRegHeart, FaRegGrinTongueWink, FaRegGrinSquintTears, FaRegGrinHearts, FaRegGrinAlt } from "react-icons/fa";
-
+import Heading from '../layout/layoutComponents/Heading';
+import { RiLogoutBoxRLine, RiArrowRightSFill, RiArrowLeftSFill, RiUser3Line, RiArrowDropRightLine, RiTwitterFill, RiTwitterLine, RiDiscordFill } from "react-icons/ri";
 
 function PostDetails() {
   const [postDetails, setPostDetails] = useState([]);
@@ -66,10 +67,12 @@ function PostDetails() {
   }
 
   return (
-    <>
-      <Link to={`../posts`} className="breadcrumbContainer-goBack">
-        <p class="breadcrumb" >Go back</p>
-      </Link>
+    <div className="wrapContent">
+      <Heading title="Post details" />
+      <div className="breadcrumb" onClick={() => navigation(-1)}>
+        <RiArrowLeftSFill />
+        <p>Go back</p>
+      </div>
       <div className="postCard">
         <div className="postCard-head">
           <a href={`/profiles/detail/${postDetails.author.name}`}>
@@ -83,8 +86,8 @@ function PostDetails() {
 
         <div className="postCard-body">
           <h3>{postDetails.title}</h3>
-          <p className="timestamp">{postDetails.created}</p>
-          <p>{postDetails.body}</p>
+          <p className="timestamp">{postDetails.created.substring(0, postDetails.created.length - 8).replace('T', ' ')}</p>
+          <p className="marginTop20">{postDetails.body}</p>
           <img src={postDetails.media} alt={postDetails.media} />
 
           <div className="reactionField">
@@ -145,7 +148,7 @@ function PostDetails() {
       </div>
 
 
-    </>
+    </div>
 
   );
 }
