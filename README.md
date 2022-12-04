@@ -1,3 +1,7 @@
+## Hosted demo user test
+
+Info coming...
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -87,7 +91,7 @@ People who have been helpful with usertesting, ideas, inspiration, builds and ot
 
 - JosefineFH
 - martineho
-- Silje S
+- siljesorland
 - pnbakken
 
 ## Bibliography
@@ -95,13 +99,11 @@ People who have been helpful with usertesting, ideas, inspiration, builds and ot
 All links have been visited in the period of 17. October - 02. December of 2022.
 
 https://www.youtube.com/watch?v=hQAHSlTtcmY
-Use this for checkbox hearts
 
 https://www.youtube.com/watch?v=pKbNCWb6USQ
 
 https://www.youtube.com/watch?v=SJVCvnKM_lI
 
-Like and dislike btn
 https://www.youtube.com/watch?v=a8KruvMkEtY
 
 https://www.youtube.com/watch?v=4oCVDkb_EIs
@@ -109,6 +111,7 @@ https://www.youtube.com/watch?v=4oCVDkb_EIs
 https://www.youtube.com/watch?v=1Io-qb45nzw&t=2s
 
 https://www.youtube.com/watch?v=0XSDAup85SA&t=9s
+
 https://www.youtube.com/watch?v=0XSDAup85SA&t=9s
 
 https://www.youtube.com/watch?v=SEecAgV1-Ro
