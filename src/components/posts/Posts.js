@@ -7,9 +7,11 @@ import { useEffect } from 'react';
 
 
 export default function Posts() {
+
   useEffect(() => {
     document.title = "NO.CO | Latest posts";
   }, []);
+
   return (
     <>
       <div className='wrapContent'>

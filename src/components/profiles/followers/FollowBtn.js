@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 import useAxios from '../../../hooks/useAxios'
 import { PROFILES_PATH } from "../../../constants/api";
@@ -29,14 +29,6 @@ export default function FollowBtn() {
       console.log("Error: ", error);
     }
   }
-
-  // Like the logged in thing, also the button needs to remember that it has been clicked.
-  // Const liked = liked ?  "" : "",
-  // const followed = toggle ? '' + auth.name : "";
-  // If toggled then set state true, if not toggled set state false
-
-  // const followed = toggle ? 
-
 
   const toggler = () => {
     toggle ? setToggle(onUnfollow) : setToggle(onFollow)
