@@ -45,7 +45,7 @@ function PostItem({ id, title, body, media, created, updated, _count, comments, 
           </Link>
           <p className="timestamp">{timestamp}</p>
           {/* <p>{updated}</p> */}
-          <p className="marginTop20">{body}</p>
+          <p>{body}</p>
           <img src={media} alt={media} />
 
           <div className="reactionField">

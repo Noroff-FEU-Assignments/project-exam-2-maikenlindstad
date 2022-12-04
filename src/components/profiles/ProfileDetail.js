@@ -139,7 +139,7 @@ function ProfileDetail() {
                       </Link>
                       {/* <h4>{profilePost.title}</h4> */}
                       <p className="timestamp">{profilePost.created.substring(0, profilePost.created.length - 8).replace('T', ' ')}</p>
-                      <p className="marginTop20">{profilePost.body}</p>
+                      <p>{profilePost.body}</p>
                       <img src={profilePost.media} alt={profilePost.media} />
                       <div className="reactionField">
                         <p>Comment section</p>

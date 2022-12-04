@@ -205,8 +205,8 @@
 }
 
 .additionalProfileInformation {
-  height: 100%;
-  border-radius: 10px 10px 10px 0;
+  /* height: auto; */
+  border-radius: 15px 15px 15px 0;
   max-width: 250px;
   margin: 0 5px;
 }
@@ -225,18 +225,21 @@
     gap: 0;
   }
 
-  .profileSection,
-  .profileContent {
+  .profileSection {
     padding: 0;
+  }
+
+  .profileContent {
+    padding: 5px;
   }
 
   .additionalProfileInformation {
     max-width: 100%;
-    height: auto;
+    /* height: auto; */
   }
 
   .profileContent {
-    flex-direction: column;
+    grid-template-columns: none;
   }
 
   .profileData__name {

@@ -87,7 +87,7 @@ function PostDetails() {
         <div className="postCard-body">
           <h3>{postDetails.title}</h3>
           <p className="timestamp">{postDetails.created.substring(0, postDetails.created.length - 8).replace('T', ' ')}</p>
-          <p className="marginTop20">{postDetails.body}</p>
+          <p>{postDetails.body}</p>
           <img src={postDetails.media} alt={postDetails.media} />
 
           <div className="reactionField">

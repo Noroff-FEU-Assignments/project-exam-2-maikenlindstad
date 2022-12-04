@@ -11,7 +11,7 @@
   --light-feather-black: #363636;
   --heading: "Montserrat", sans-serif;
   --paragraph: "Playfair Display", serif;
-  --xsmall-font-size: 0.8rem;
+  --xsmall-font-size: 0.9rem;
   --small-font-size: 1.025rem;
   --medium-font-size: 1.3rem;
   --large-font-size: 1.675rem;
@@ -39,8 +39,4 @@ button {
 
 .marginTop10 {
   margin-top: 10px;
-}
-
-.marginTop20 {
-  margin-top: 20px;
 }
