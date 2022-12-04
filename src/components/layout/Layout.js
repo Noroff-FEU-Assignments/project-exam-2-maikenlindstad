@@ -36,7 +36,6 @@ function Layout() {
           <Route path="/profiles/details/:name" element={<ProfileDetail />} />
         </Routes>
         <Footer />
-
       </Router>
     </AuthProvider >
   );

@@ -23,7 +23,6 @@ function PostList() {
         const postResponse = await fetch(postsUrl, options);
         if (postResponse.ok) {
           const jsonPosts = await postResponse.json();
-          console.log(jsonPosts);
           setPosts(jsonPosts);
 
         } else {

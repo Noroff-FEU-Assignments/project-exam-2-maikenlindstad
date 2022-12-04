@@ -32,7 +32,6 @@ export default function EditBannerForm() {
     async function getBanner() {
       try {
         const response = await http.get(url);
-        console.log("The Banner response I'm working with now: ", response.data);
         setBanner(response.data);
       } catch (error) {
         console.log(error);
@@ -51,11 +50,8 @@ export default function EditBannerForm() {
     setUpdateError(null);
     setUpdated(false);
 
-    console.log(data);
-
     try {
-      const response = await http.put(url + "/media", data);
-      console.log("The Banner response: ", response.data);
+      await http.put(url + "/media", data);
       setUpdated(true);
       navigate(-1);
 

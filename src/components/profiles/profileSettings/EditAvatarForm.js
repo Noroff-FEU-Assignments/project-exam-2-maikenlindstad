@@ -32,7 +32,6 @@ export default function EditAvatarForm() {
     async function getAvatar() {
       try {
         const response = await http.get(url);
-        console.log("The avatar response I'm working with now: ", response.data);
         setAvatar(response.data);
       } catch (error) {
         console.log(error);
@@ -51,11 +50,8 @@ export default function EditAvatarForm() {
     setUpdateError(null);
     setUpdated(false);
 
-    console.log(data);
-
     try {
       const response = await http.put(url + "/media", data);
-      console.log("The avatar response: ", response.data);
       setUpdated(true);
       navigate(-1);
 

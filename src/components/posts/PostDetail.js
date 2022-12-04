@@ -37,7 +37,6 @@ function PostDetails() {
         const response = await fetch(url, options);
         if (response.ok) {
           const json = await response.json();
-          console.log(json);
           setPostDetails(json);
         } else {
           setError("An error occured");

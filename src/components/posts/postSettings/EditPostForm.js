@@ -54,7 +54,6 @@ export default function EditPostForm() {
 
     try {
       const response = await http.put(url, data);
-      console.log("The response: ", response.data);
       setUpdated(true);
       navigate("/posts#" + id);
 

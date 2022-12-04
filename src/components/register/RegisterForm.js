@@ -41,7 +41,6 @@ export default function RegisterForm() {
 
     try {
       const response = await fetch(url, options);
-      console.log("response", response.json);
       navigate("/login");
     } catch (error) {
       console.log("Error: ", error);

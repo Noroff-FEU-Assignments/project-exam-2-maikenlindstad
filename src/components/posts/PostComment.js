@@ -29,11 +29,8 @@ export default function PostComment() {
     setSubmitting(true);
     setServerError(null);
 
-    console.log(data);
-
     try {
       const response = await http.post(url, data);
-      console.log("Comment response", response.data);
       window.location.reload(true);
     } catch (error) {
       console.log("Comment error: ", error);

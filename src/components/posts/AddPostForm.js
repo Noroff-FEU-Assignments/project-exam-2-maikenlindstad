@@ -9,7 +9,6 @@ import { API, CREATE_POST_PATH } from "../../constants/api";
 import AuthContext from "../../context/AuthContext";
 
 const url = API + CREATE_POST_PATH;
-console.log("URL:" + url);
 
 const schema = yup.object().shape({
   title: yup.string().required("Please enter a title")
@@ -34,7 +33,6 @@ export default function AddPostForm() {
 
     try {
       const response = await http.post(url, data);
-      console.log("response", response.data);
       navigate("/posts");
       window.location.reload(true);
     } catch (error) {

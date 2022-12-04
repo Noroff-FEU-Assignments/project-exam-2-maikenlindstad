@@ -9,7 +9,6 @@ import { API, LOGIN_PATH } from "../../constants/api";
 import AuthContext from "../../context/AuthContext";
 
 const url = API + LOGIN_PATH;
-console.log("URL:" + url);
 
 const schema = yup.object().shape({
   email: yup.string().required("Please enter your email").email("Please enter your provided Noroff email"),
@@ -32,11 +31,8 @@ export default function LoginForm() {
     setSubmitting(true);
     setLoginError(null);
 
-    console.log(data);
-
     try {
       const response = await axios.post(url, data);
-      console.log("response", response.data);
       setAuth(response.data);
       navigate("/posts");
     } catch (error) {
