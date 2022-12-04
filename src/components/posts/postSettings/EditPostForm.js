@@ -6,8 +6,7 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import FormError from "../../common/FormError";
 import useAxios from "../../../hooks/useAxios";
-import Heading from "../../layout/layoutComponents/Heading";
-import { API, POST_PATH } from "../../../constants/api";
+import { POST_PATH } from "../../../constants/api";
 import DeletePost from "./deletePost";
 
 const schema = yup.object().shape({
@@ -25,19 +24,16 @@ export default function EditPostForm() {
   const { register, handleSubmit, formState: { errors } } = useForm({
     resolver: yupResolver(schema),
   });
+
   const navigate = useNavigate();
-
   const http = useAxios();
-
   let { id } = useParams();
-
   const url = POST_PATH + `/` + id;
 
   useEffect(function () {
     async function getPost() {
       try {
         const response = await http.get(url);
-        // console.log("The response I'm working with now: ", response.data);
         setPost(response.data);
       } catch (error) {
         console.log(error);
@@ -55,11 +51,6 @@ export default function EditPostForm() {
     setUpdatingPost(true);
     setUpdateError(null);
     setUpdated(false);
-
-
-
-
-    console.log(data);
 
     try {
       const response = await http.put(url, data);
@@ -79,13 +70,6 @@ export default function EditPostForm() {
 
   if (fetchError) return <div>Error loading post</div>;
 
-  // const handleClickScroll = () => {
-  //   const element = document.getElementById('section-1');
-  //   if (element) {
-  //     // 👇 Will scroll smoothly to the top of the next section
-  //     element.scrollIntoView({ behavior: 'smooth' });
-  //   }
-  // };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
@@ -101,6 +85,11 @@ export default function EditPostForm() {
         <div>
           <textarea  {...register("body")} defaultValue={post.body} id="body" />
           {errors.body && <FormError>{errors.body.message}</FormError>}
+        </div>
+
+        <div>
+          <input {...register("media")} id="media" defaultValue={post.media} />
+          {errors.media && <FormError>{errors.media.message}</FormError>}
         </div>
 
         <button className="cta-btn green marginTop10">{updatingPost ? "Updating post..." : "Update"}</button>

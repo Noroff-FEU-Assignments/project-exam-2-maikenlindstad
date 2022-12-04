@@ -13,7 +13,7 @@ function ProfileDetail() {
   const [profile, setProfile] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [auth] = useContext(AuthContext);
+  const [auth,] = useContext(AuthContext);
 
   const navigation = useNavigate();
   const { name } = useParams();

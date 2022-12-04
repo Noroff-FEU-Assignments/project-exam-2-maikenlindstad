@@ -89,7 +89,8 @@ a,
 }
 
 .scrollToTop,
-.pageBtn {
+.pageBtn,
+.breadcrumb {
   justify-content: center;
 }
 

@@ -12,7 +12,7 @@ const schema = yup.object().shape({
 });
 
 export default function EditBannerForm() {
-  const [setBanner] = useState(null);
+  const [, setBanner] = useState(null);
   const [updated, setUpdated] = useState(false);
   const [fetchingBanner, setFetchingBanner] = useState(true);
   const [updatingBanner, setUpdatingBanner] = useState(false);
@@ -57,7 +57,7 @@ export default function EditBannerForm() {
       const response = await http.put(url + "/media", data);
       console.log("The Banner response: ", response.data);
       setUpdated(true);
-      navigate(-1)
+      navigate(-1);
 
     } catch (error) {
       console.log("error", error);
@@ -86,6 +86,4 @@ export default function EditBannerForm() {
       </fieldset>
     </form>
   )
-
-
 }

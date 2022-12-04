@@ -1,5 +1,4 @@
 import Heading from '../layout/layoutComponents/Heading';
-// import { API } from '../../constants/api';
 import LoginForm from './LoginForm';
 
 export default function Login() {
@@ -17,8 +16,6 @@ export default function Login() {
           </div>
         </div>
       </div>
-
-
     </>
   );
 }

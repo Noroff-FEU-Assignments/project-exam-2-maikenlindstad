@@ -5,21 +5,18 @@ import { API, POST_PATH } from "../../constants/api";
 import { Link } from "react-router-dom";
 import PostComment from "./PostComment";
 import PostReaction from "./PostReaction";
-import { GoTrashcan, GoPencil } from "react-icons/go";
-import { FaRegThumbsUp, FaRegHeart, FaRegGrinTongueWink, FaRegGrinSquintTears, FaRegGrinHearts, FaRegGrinAlt } from "react-icons/fa";
 import Heading from '../layout/layoutComponents/Heading';
-import { RiLogoutBoxRLine, RiArrowRightSFill, RiArrowLeftSFill, RiUser3Line, RiArrowDropRightLine, RiTwitterFill, RiTwitterLine, RiDiscordFill } from "react-icons/ri";
+import { RiArrowLeftSFill } from "react-icons/ri";
 
 function PostDetails() {
   const [postDetails, setPostDetails] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [auth, setAuth] = useContext(AuthContext);
+  const [auth,] = useContext(AuthContext);
 
   const navigation = useNavigate();
 
   const { id } = useParams();
-  const { name } = useParams();
 
   if (!id) {
     navigation("/posts");
@@ -120,8 +117,6 @@ function PostDetails() {
                           <p>{comment.body}</p>
                         </div>
                         <Link to={`../posts/edit/${id}/comment`}>
-                          {/* <GoPencil />
-                          <GoTrashcan /> */}
                         </Link>
 
                       </div>

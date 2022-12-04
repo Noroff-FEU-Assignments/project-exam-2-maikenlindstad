@@ -11,9 +11,9 @@ const schema = yup.object().shape({
 });
 
 export default function PostReaction() {
-  const [submitting, setSubmitting] = useState(false);
-  const [emoji, setEmoji] = useState();
-  const [serverError, setServerError] = useState(null);
+  const [, setSubmitting] = useState(false);
+  const [, setEmoji] = useState();
+  const [, setServerError] = useState(null);
 
   let { id } = useParams();
   let symbol = "❤️";

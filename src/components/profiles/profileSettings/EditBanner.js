@@ -1,4 +1,3 @@
-import Heading from '../../layout/layoutComponents/Heading';
 import EditBannerForm from './EditBannerForm'
 import EditAvatarForm from './EditAvatarForm'
 import { useNavigate } from 'react-router-dom';
@@ -7,13 +6,12 @@ import { useContext } from 'react';
 
 export default function EditComment() {
   const navigation = useNavigate();
-  const [auth] = useContext(AuthContext);
+  const [auth,] = useContext(AuthContext);
 
   return (
     <>
       <div className='profile'>
-        <div className="profileBanner editing">
-          <Heading title="Copying new url... Editing banner..." />
+        <div className="profileBanner editing" style={{ backgroundImage: `url(${auth.banner})` }}>
         </div>
         <div className='profileDataSection'>
           <EditBannerForm />

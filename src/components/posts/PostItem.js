@@ -1,22 +1,10 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { FiMoreHorizontal } from "react-icons/fi";
-import { useState, useEffect, useContext, useRef } from "react";
-
-
-
-// import { AiFillLike } from "react-icons/ai";
-import { FaRegThumbsUp, FaRegHeart, FaRegGrinTongueWink, FaRegGrinSquintTears, FaRegGrinHearts, FaRegGrinAlt } from "react-icons/fa";
-import { FcLike } from "react-icons/fc";
-import PostReaction from "./PostReaction";
 import ScrollToId from "../common/ScrollToId";
 
-// Date date = (Date)formatter.parse(start_dt);
-
-// Denne endrer på utseende til listen av poster 
-
 const profilePictureDefault = "https://images.pexels.com/photos/3094799/pexels-photo-3094799.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
-function PostItem({ id, title, body, media, created, updated, _count, comments, reactions, author, name }) {
+function PostItem({ id, title, body, media, created, _count, author }) {
   const timeCreated = created.substring(0, created.length - 8);
   const timestamp = timeCreated.replace('T', ' ')
 
@@ -44,7 +32,6 @@ function PostItem({ id, title, body, media, created, updated, _count, comments, 
             <h4>{title}</h4>
           </Link>
           <p className="timestamp">{timestamp}</p>
-          {/* <p>{updated}</p> */}
           <p>{body}</p>
           <img src={media} alt={media} />
 
@@ -52,14 +39,10 @@ function PostItem({ id, title, body, media, created, updated, _count, comments, 
             <Link to={`detail/${id}`}>
               <p>{_count.comments} comments</p>
             </Link>
-            {/* <Link to={`detail/${id}`}> */}
             <div className="reactions">
-              {/* <PostReaction /> */}
               <p>❤️</p>
               <p>{_count.reactions}</p>
             </div>
-            {/* <p>{_count.reactions}</p> */}
-            {/* </Link> */}
 
           </div>
 

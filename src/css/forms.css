@@ -78,6 +78,7 @@ textarea {
   background-color: var(--lighter-blue);
 }
 
-#banner {
+#banner,
+#avatar {
   text-align: center;
 }

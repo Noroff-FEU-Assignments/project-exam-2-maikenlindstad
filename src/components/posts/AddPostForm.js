@@ -7,7 +7,6 @@ import useAxios from '../../hooks/useAxios'
 import FormError from "../common/FormError";
 import { API, CREATE_POST_PATH } from "../../constants/api";
 import AuthContext from "../../context/AuthContext";
-import { BsCardImage } from "react-icons/bs";
 
 const url = API + CREATE_POST_PATH;
 console.log("URL:" + url);
@@ -19,22 +18,19 @@ const schema = yup.object().shape({
 export default function AddPostForm() {
   const [submitting, setSubmitting] = useState(false);
   const [serverError, setServerError] = useState(null);
+  const [auth,] = useContext(AuthContext);
 
   const navigate = useNavigate();
+  const http = useAxios();
+  const profilePictureDefault = "https://images.pexels.com/photos/3094799/pexels-photo-3094799.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
 
   const { register, handleSubmit, formState: { errors } } = useForm({
     resolver: yupResolver(schema),
   });
 
-  const http = useAxios();
-
-  const [auth, setAuth] = useContext(AuthContext);
-
   async function onSubmit(data) {
     setSubmitting(true);
     setServerError(null);
-
-    console.log(data);
 
     try {
       const response = await http.post(url, data);
@@ -47,11 +43,8 @@ export default function AddPostForm() {
       setServerError(error.toString());
     } finally {
       setSubmitting(false);
-
     }
   }
-  const profilePictureDefault = "https://images.pexels.com/photos/3094799/pexels-photo-3094799.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
-
 
   return (
     <div className="postCard">
@@ -84,7 +77,6 @@ export default function AddPostForm() {
               <input {...register("media")} id="media" placeholder="Copy + paste img url" />
               {errors.media && <FormError>{errors.media.message}</FormError>}
             </div>
-            {/* <p>* Must have</p> */}
 
             <button className="cta-btn marginTop10 green">{submitting ? "Adding post..." : "Post"}</button>
           </fieldset>

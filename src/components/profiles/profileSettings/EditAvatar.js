@@ -7,7 +7,7 @@ import { useContext } from 'react';
 
 export default function EditComment() {
   const navigation = useNavigate();
-  const [auth] = useContext(AuthContext);
+  const [auth,] = useContext(AuthContext);
 
   return (
     <>
@@ -22,8 +22,8 @@ export default function EditComment() {
         </div>
         <div className='profileWrapper'>
           <div className='profilePictureSection'>
-            <div className='profilePictureInfo editing'>
-              <Heading title="Copying new url... Editing avatar..." />
+            <div className='profilePictureInfo editing' style={{ backgroundImage: `url(${auth.avatar})` }}>
+              {/* <Heading title="Copying new url... Editing avatar..." /> */}
             </div>
             <EditAvatarForm />
             <div className="breadcrumb" onClick={() => navigation(-1)}>

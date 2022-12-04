@@ -1,7 +1,6 @@
 import { useState, useEffect, useContext } from "react";
 import { API, POST_PATH, PROFILES_PATH } from "../../constants/api";
 import AuthContext from "../../context/AuthContext";
-// import { useParams } from "react-router-dom";
 import PostItem from "./PostItem";
 
 const postsUrl = API + POST_PATH + "?_author=true&_comments=true&_reactions=true";
@@ -10,7 +9,7 @@ function PostList() {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [auth, setAuth] = useContext(AuthContext);
+  const [auth,] = useContext(AuthContext);
 
   useEffect(() => {
     async function getPosts() {
@@ -48,11 +47,6 @@ function PostList() {
   if (error) {
     return <div>ERROR: An error occured</div>;
   }
-
-
-
-
-  // Denne endrer på utseende til detaljene av postene
 
   return (
     <>

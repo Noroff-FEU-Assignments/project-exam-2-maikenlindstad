@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -12,7 +12,7 @@ const schema = yup.object().shape({
 });
 
 export default function EditAvatarForm() {
-  const [avatar, setAvatar] = useState(null);
+  const [, setAvatar] = useState(null);
   const [updated, setUpdated] = useState(false);
   const [fetchingAvatar, setFetchingAvatar] = useState(true);
   const [updatingAvatar, setUpdatingAvatar] = useState(false);
@@ -26,6 +26,8 @@ export default function EditAvatarForm() {
   const http = useAxios();
   let { name } = useParams();
   const url = PROFILES_PATH + `/` + name;
+  const navigate = useNavigate();
+
 
   useEffect(function () {
     async function getAvatar() {
@@ -56,6 +58,8 @@ export default function EditAvatarForm() {
       const response = await http.put(url + "/media", data);
       console.log("The avatar response: ", response.data);
       setUpdated(true);
+      navigate(-1);
+
     } catch (error) {
       console.log("error", error);
       setUpdateError(error.toString());
@@ -75,7 +79,7 @@ export default function EditAvatarForm() {
 
       <fieldset disabled={updatingAvatar}>
         <div>
-          <input {...register("avatar")} defaultValue={avatar.avatar} id="avatar" />
+          <input {...register("avatar")} placeholder="Insert url" id="avatar" />
           {errors.avatar && <FormError>{errors.avatar.message}</FormError>}
         </div>
 
@@ -83,6 +87,5 @@ export default function EditAvatarForm() {
       </fieldset>
     </form>
   )
-
 
 }

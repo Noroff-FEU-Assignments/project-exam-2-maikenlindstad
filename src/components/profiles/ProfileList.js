@@ -9,7 +9,7 @@ function ProfileList() {
   const [profiles, setProfiles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [auth, setAuth] = useContext(AuthContext);
+  const [auth,] = useContext(AuthContext);
 
   useEffect(() => {
     document.title = "NO.CO | Contributors";

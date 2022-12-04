@@ -1,6 +1,4 @@
 import { AuthProvider } from '../../context/AuthContext';
-import { useContext } from 'react';
-import AuthContext from '../../context/AuthContext';
 
 import {
   BrowserRouter as Router,
@@ -38,10 +36,7 @@ function Layout() {
           <Route path="/profiles/edit/banner/:name" element={<EditBanner />} />
           <Route path="/profiles/details/:name" element={<ProfileDetail />} />
         </Routes>
-
-
       </Router>
-
     </AuthProvider >
   );
 }
