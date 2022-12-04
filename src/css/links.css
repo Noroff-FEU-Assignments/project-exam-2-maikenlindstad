@@ -49,7 +49,8 @@ a,
   border: 1px solid var(--parchment-white);
 }
 
-.profileData .cta-btn:hover {
+.profileData .cta-btn:hover,
+.cta-follow {
   color: var(--parchment-white);
 }
 

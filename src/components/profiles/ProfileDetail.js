@@ -61,6 +61,12 @@ function ProfileDetail() {
     return <div>An error occured: {error}</div>;
   }
 
+  function NoPosts() {
+    if (profile.posts.length === 0) {
+      return (<p>No posts yet</p>);
+    }
+  }
+
   const profilePictureDefault = "https://images.pexels.com/photos/3094799/pexels-photo-3094799.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
   const noBanner = "https://images.pexels.com/photos/2156881/pexels-photo-2156881.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
 
@@ -121,7 +127,7 @@ function ProfileDetail() {
               <h2>Posts</h2>
             </div>
             <div className="profilePosts">
-
+              <NoPosts />
               {profile.posts.map((profilePost, id) => {
                 return (
                   <div key={id} className="post-card" >

@@ -22,9 +22,9 @@
 //     // }
 //   }
 
-//   // return (
-//   //   <>
-//   //     <p onClick={onFollow} className="cta-follow">Follow</p>
-//   //   </>
-//   // );
+//   return (
+//     <>
+//       <p onClick={onFollow} className="cta-follow">Follow</p>
+//     </>
+//   );
 // }
