@@ -181,4 +181,8 @@ textarea {
   .profileContent h3 {
     padding: 10px;
   }
+
+  .profileContent__postSection h2 {
+    padding: 0 20px;
+  }
 }

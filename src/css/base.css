@@ -119,8 +119,7 @@ li .active {
   margin: 40px auto;
 }
 
-.beforeLoginWrapper,
-.navbar.expanded {
+.beforeLoginWrapper {
   height: 100vh;
 }
 
@@ -162,6 +161,9 @@ li .active {
 }
 
 @media only screen and (max-width: 799px) {
+  .navbar.expanded {
+    height: 100vh;
+  }
   .welcomeSection__information {
     max-width: 440px;
   }
