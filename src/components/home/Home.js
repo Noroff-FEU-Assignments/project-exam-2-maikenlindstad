@@ -1,5 +1,5 @@
 import Heading from '../layout/layoutComponents/Heading';
-import preview from '../../images/preview.png';
+import preview from '../../images/some-preview.png';
 
 export default function Home() {
   return (

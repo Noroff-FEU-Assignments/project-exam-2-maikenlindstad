@@ -88,6 +88,10 @@ footer li {
   align-items: center;
 }
 
+.welcomeSection {
+  padding-top: 50px;
+}
+
 .navbar {
   max-width: 1200px;
   justify-content: flex-end;
