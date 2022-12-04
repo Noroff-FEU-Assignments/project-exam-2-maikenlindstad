@@ -50,8 +50,8 @@ main {
 }
 
 footer {
-  background-color: #130a0b;
-  position: absolute;
+  background-color: var(--feather-black);
+  border-top: 1px solid var(--light-feather-black);
   bottom: 0;
 }
 
@@ -61,7 +61,6 @@ footer ul,
 .welcomeSection__information,
 .welcomeSection,
 .loginRegisterSections > div:nth-of-type(1),
-/* .nav__links, */
 .navbar.expanded .nav__links,
 .beforeLogin__borderedSection {
   display: flex;
@@ -70,7 +69,6 @@ footer ul,
 footer ul {
   justify-content: space-around;
   list-style: none;
-  width: 100vw;
 }
 
 footer li {
@@ -121,13 +119,8 @@ li .active {
   margin: 40px auto;
 }
 
-/* .wrapper {
-  width: 100%;
-  overflow-x: hidden;
-  overflow-y: auto;
-} */
-
-.beforeLoginWrapper {
+.beforeLoginWrapper,
+.navbar.expanded {
   height: 100vh;
 }
 
@@ -203,10 +196,6 @@ li .active {
   .navbar {
     position: relative;
     transition: 0.5s height ease-in-out;
-  }
-
-  .navbar.expanded {
-    height: 100vh;
   }
 
   .navbar.expanded .nav__links,

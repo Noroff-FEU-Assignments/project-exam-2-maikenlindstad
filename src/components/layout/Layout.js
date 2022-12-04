@@ -13,6 +13,7 @@ import Posts from '../posts/Posts';
 import Profiles from '../profiles/Profiles';
 import ProfileDetail from '../profiles/ProfileDetail';
 import Navigation from './layoutComponents/Navigation';
+import Footer from "../layout/layoutComponents/Footer";
 import PostDetail from '../posts/PostDetail';
 import EditPost from '../posts/postSettings/EditPost';
 import EditProfile from '../profiles/profileSettings/EditProfile'
@@ -34,6 +35,8 @@ function Layout() {
           <Route path="/profiles/edit/profile/:name" element={<EditProfile />} />
           <Route path="/profiles/details/:name" element={<ProfileDetail />} />
         </Routes>
+        <Footer />
+
       </Router>
     </AuthProvider >
   );

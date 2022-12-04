@@ -33,6 +33,15 @@ a,
   border-radius: 10px 10px 10px 0;
 }
 
+.next {
+  border-radius: 10px 0 10px 10px;
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 .profileData .cta-btn,
 .profileData .cta-btn:hover,
 .cta-follow,

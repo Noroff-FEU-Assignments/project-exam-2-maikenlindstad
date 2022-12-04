@@ -59,7 +59,10 @@ function ProfileList() {
             </div>;
           })}
         </div>
-
+        <div>
+          <button className="cta-btn disabled">Previous</button>
+          <button className="cta-btn next disabled">Next</button>
+        </div>
       </div>
     </>
   );
