@@ -48,7 +48,8 @@ h2 {
 }
 
 h1,
-.nav__links {
+.nav__links,
+footer p {
   text-transform: uppercase;
 }
 
@@ -121,7 +122,8 @@ textarea {
 }
 
 .welcomeInformation p,
-.timestamp {
+.timestamp,
+footer p {
   font-size: var(--xsmall-font-size);
 }
 
@@ -175,6 +177,11 @@ textarea {
 
 .welcomeInformation p {
   margin: 10px 0;
+}
+
+footer p {
+  opacity: 0.9;
+  font-weight: 100;
 }
 
 @media only screen and (max-width: 798px) {
