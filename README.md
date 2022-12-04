@@ -1,8 +1,42 @@
-## Hosted demo user test
+# Hosted demo user test
 
-Info coming...
+Welcome to NO.CO!
 
-# Getting Started with Create React App
+NO.CO is a social media app for the students and teachers of Noroff. Joining NO.CO can help you build gaps between graphic designers, front- and back end developers, 3D designers, photographers and more.
+
+## Guided usertest
+
+To user test this project please do the following:
+[It will be helpful to keep a notepad next to you whenever questions are raised.]
+
+- Start by entering: [NO.CO](https://no-co.netlify.app/)
+- Log in or sign up
+- You have now entered the social media app. Take a few moments to browse the site.
+- Personalize your account by adding your own banner and avatar.
+  (A known issue is that the banner and avatar do not immediately update.
+  Try logging in and out to see your changes.)
+- Write your first post. Do the example first. Then, if you'd like, write something of your own.
+  Example:
+  Title: Hello!
+  Content: What a lovely day.
+  Image url: Keep empty
+- View your post, edit it by adding the following:
+  Content: What a lovely day to share something.
+- Update your post.
+- Now, delete your post and rather write your own post if you'd like.
+- Find a user you find interesting, and follow the user.
+  (A known issue is that the style of the follow button is not toggling properly. You can confirm that you are following the person by clicking the follow button again and if the page do not reload, then you are following that person.)
+- If you want, you can unfollow the person, or follow more people. Its totally up to you.
+- Write more posts, or visit your own profile and look at your own profile page.
+- Find your way to the latest posts again and find a post you like.
+- Comment and like that post, if you want.
+- Log out
+
+Thank you for participating! <3
+
+# Cloning the project and working on it locally
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -125,3 +159,5 @@ https://developer.spotify.com/documentation/general/design-and-branding/
 https://www.greengeeks.ca/blog/html-tags-for-seo/
 
 https://www.colorpsychology.org/teal/
+
++more

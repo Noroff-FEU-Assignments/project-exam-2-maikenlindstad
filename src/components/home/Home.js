@@ -18,8 +18,8 @@ export default function Home() {
             <p>NO.CO, Noroff Community, is a social media app for the students and teachers of Noroff.
               As a student or teacher you have been provided with a stud.noroff.no or a noroff.no email account.
               Enter the app using your provided e-mail.</p>
-            <p>Joining NO.CO can build gaps between graphic designers, front- and back end developers, 3D designers,
-              photographers and more. You might find your crew here.</p>
+            <p>Joining NO.CO can help you build gaps between graphic designers, front- and back end developers, 3D designers,
+              photographers and more.</p>
             <p>If you have trouble entering your account, please contact Noroff <a href="">here</a>.</p>
           </div>
         </div>
