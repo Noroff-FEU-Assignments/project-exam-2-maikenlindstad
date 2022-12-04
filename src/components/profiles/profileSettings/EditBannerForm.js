@@ -74,7 +74,7 @@ export default function EditBannerForm() {
 
       <fieldset disabled={updatingBanner}>
         <div>
-          <input {...register("banner")} id="banner" placeholder="Insert url" />
+          <input {...register("banner")} id="banner" placeholder="Insert new banner url" />
           {errors.banner && <FormError>{errors.banner.message}</FormError>}
         </div>
 

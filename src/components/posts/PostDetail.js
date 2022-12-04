@@ -7,6 +7,8 @@ import PostComment from "./PostComment";
 import PostReaction from "./PostReaction";
 import Heading from '../layout/layoutComponents/Heading';
 import { RiArrowLeftSFill } from "react-icons/ri";
+import { FiMoreHorizontal } from "react-icons/fi";
+
 
 function PostDetails() {
   const [postDetails, setPostDetails] = useState([]);
@@ -79,6 +81,9 @@ function PostDetails() {
             <a href={`/profiles/detail/${postDetails.author.name}`}>
               <h3>{postDetails.author.name} </h3>
             </a>
+            <Link to={`../posts/edit/${id}`}>
+              <FiMoreHorizontal />
+            </Link>
           </div>
         </div>
 

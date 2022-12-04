@@ -74,7 +74,7 @@ export default function EditAvatarForm() {
 
       <fieldset disabled={updatingAvatar}>
         <div>
-          <input {...register("avatar")} placeholder="Insert url" id="avatar" />
+          <input {...register("avatar")} placeholder="Insert new avatar url" id="avatar" />
           {errors.avatar && <FormError>{errors.avatar.message}</FormError>}
         </div>
         <button>{updatingAvatar ? "Updating Avatar..." : "Update"}</button>

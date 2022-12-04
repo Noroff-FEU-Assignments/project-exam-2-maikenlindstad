@@ -39,10 +39,14 @@ function PostItem({ id, title, body, media, created, _count, author }) {
             <Link to={`detail/${id}`}>
               <p>{_count.comments} comments</p>
             </Link>
-            <div className="reactions">
-              <p>❤️</p>
-              <p>{_count.reactions}</p>
-            </div>
+
+            <Link to={`detail/${id}`}>
+              <div className="reactions">
+                <p>❤️</p>
+                <p>{_count.reactions}</p>
+              </div>
+            </Link>
+
 
           </div>
 
