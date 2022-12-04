@@ -15,8 +15,7 @@ import ProfileDetail from '../profiles/ProfileDetail';
 import Navigation from './layoutComponents/Navigation';
 import PostDetail from '../posts/PostDetail';
 import EditPost from '../posts/postSettings/EditPost';
-import EditAvatar from '../profiles/profileSettings/EditAvatar'
-import EditBanner from '../profiles/profileSettings/EditBanner'
+import EditProfile from '../profiles/profileSettings/EditProfile'
 
 function Layout() {
   return (
@@ -32,8 +31,7 @@ function Layout() {
           <Route path="/posts/edit/:id" element={<EditPost />} />
           <Route path="/profiles" element={<Profiles />} />
           <Route path="/profiles/detail/:name" element={<ProfileDetail />} />
-          <Route path="/profiles/edit/avatar/:name" element={<EditAvatar />} />
-          <Route path="/profiles/edit/banner/:name" element={<EditBanner />} />
+          <Route path="/profiles/edit/profile/:name" element={<EditProfile />} />
           <Route path="/profiles/details/:name" element={<ProfileDetail />} />
         </Routes>
       </Router>

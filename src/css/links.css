@@ -90,12 +90,16 @@ a,
 
 .scrollToTop,
 .pageBtn,
-.breadcrumb {
+.profile .breadcrumb {
   justify-content: center;
 }
 
-.scrollToTop {
+.scrollToTop,
+.breadcrumb {
   align-items: center;
+}
+
+.scrollToTop {
   background-color: #a9c0cabb;
   position: fixed;
   bottom: 25px;
@@ -126,7 +130,6 @@ a,
 .breadcrumb {
   padding: 10px;
   display: flex;
-  align-items: center;
 }
 
 .breadcrumbContainer,

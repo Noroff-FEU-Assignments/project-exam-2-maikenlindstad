@@ -120,6 +120,11 @@ textarea {
   font-weight: 200;
 }
 
+.welcomeInformation p,
+.timestamp {
+  font-size: var(--xsmall-font-size);
+}
+
 .nav__links {
   list-style: none;
   margin: 0;
@@ -159,7 +164,6 @@ textarea {
 }
 
 .timestamp {
-  font-size: var(--xsmall-font-size);
   padding-bottom: 10px;
 }
 
@@ -167,6 +171,10 @@ textarea {
 .timestamp {
   color: rgba(255, 255, 255, 0.582);
   max-width: 400px;
+}
+
+.welcomeInformation p {
+  margin: 10px 0;
 }
 
 @media only screen and (max-width: 798px) {

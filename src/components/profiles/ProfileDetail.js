@@ -7,8 +7,6 @@ import { GoPencil } from "react-icons/go";
 import FollowBtn from "./followers/FollowBtn";
 import { RiArrowLeftSFill } from "react-icons/ri";
 
-
-
 function ProfileDetail() {
   const [profile, setProfile] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -69,7 +67,7 @@ function ProfileDetail() {
   return (
     <div className="profile">
       <div className="profileBanner" style={{ backgroundImage: `url(${profile.banner ? profile.banner : noBanner})` }}>
-        <Link to={`/profiles/edit/banner/${name}`}>
+        <Link to={`/profiles/edit/profile/${name}`}>
           <span><GoPencil className="pencil" /></span>
         </Link>
       </div>
@@ -98,7 +96,7 @@ function ProfileDetail() {
             <p>{profile._count.followers} Followers</p>
           </div>
           <div className="profilePictureInfo" style={{ backgroundImage: `url(${profile.avatar ? profile.avatar : profilePictureDefault})` }}>
-            <Link to={`/profiles/edit/avatar/${name}`}>
+            <Link to={`/profiles/edit/profile/${name}`}>
               <span><GoPencil className="pencil" /></span>
             </Link>
           </div>

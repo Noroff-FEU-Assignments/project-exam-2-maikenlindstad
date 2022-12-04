@@ -77,7 +77,9 @@ function PostDetails() {
             </div>
           </a>
           <div className="userInfo-section">
-            <h3>{postDetails.author.name} </h3>
+            <a href={`/profiles/detail/${postDetails.author.name}`}>
+              <h3>{postDetails.author.name} </h3>
+            </a>
           </div>
         </div>
 
@@ -125,24 +127,16 @@ function PostDetails() {
                         <p>Like</p> <p>Respond</p>
                       </div>
                     </div>
-
                   </div>
-
                 </>
-
               );
             })}
-
-
           </div>
-
           <div>
             <PostComment />
           </div>
         </div>
       </div>
-
-
     </div>
 
   );

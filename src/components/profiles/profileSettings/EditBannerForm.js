@@ -8,7 +8,7 @@ import useAxios from "../../../hooks/useAxios";
 import { PROFILES_PATH } from "../../../constants/api";
 
 const schema = yup.object().shape({
-  banner: yup.string().required("Enter Avatar url")
+  banner: yup.string().required("Enter url")
 });
 
 export default function EditBannerForm() {
@@ -72,7 +72,7 @@ export default function EditBannerForm() {
   if (fetchError) return <div>Error loading Banner</div>;
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form className="edit" onSubmit={handleSubmit(onSubmit)}>
       {updated && <div><p>The post was updated.</p></div>}
       {updateError && <FormError>{updateError}</FormError>}
 

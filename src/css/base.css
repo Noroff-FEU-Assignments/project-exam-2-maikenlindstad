@@ -114,6 +114,7 @@ li .active {
 .wrapContent,
 .loginRegisterSections {
   max-width: 1000px;
+  padding: 0 5px;
 }
 
 .wrapContent {
@@ -168,6 +169,9 @@ li .active {
 }
 
 @media only screen and (max-width: 799px) {
+  .welcomeSection__information {
+    max-width: 440px;
+  }
   .welcomeSection img {
     width: 80%;
     height: auto;

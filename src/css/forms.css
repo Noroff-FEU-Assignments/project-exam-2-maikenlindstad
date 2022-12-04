@@ -59,6 +59,9 @@ textarea {
 form input {
   max-width: 1000px;
 }
+.edit input {
+  border: 3px solid var(--base-blue);
+}
 
 textarea {
   justify-content: flex-end;

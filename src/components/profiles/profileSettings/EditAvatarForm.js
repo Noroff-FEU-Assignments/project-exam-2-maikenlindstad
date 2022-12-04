@@ -8,7 +8,7 @@ import useAxios from "../../../hooks/useAxios";
 import { PROFILES_PATH } from "../../../constants/api";
 
 const schema = yup.object().shape({
-  avatar: yup.string().required("Enter Avatar url")
+  avatar: yup.string().required("Enter url")
 });
 
 export default function EditAvatarForm() {
@@ -27,7 +27,6 @@ export default function EditAvatarForm() {
   let { name } = useParams();
   const url = PROFILES_PATH + `/` + name;
   const navigate = useNavigate();
-
 
   useEffect(function () {
     async function getAvatar() {
@@ -73,7 +72,7 @@ export default function EditAvatarForm() {
   if (fetchError) return <div>Error loading Avatar</div>;
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form className="edit" onSubmit={handleSubmit(onSubmit)}>
       {updated && <div><p>The post was updated.</p></div>}
       {updateError && <FormError>{updateError}</FormError>}
 
@@ -82,10 +81,8 @@ export default function EditAvatarForm() {
           <input {...register("avatar")} placeholder="Insert url" id="avatar" />
           {errors.avatar && <FormError>{errors.avatar.message}</FormError>}
         </div>
-
         <button>{updatingAvatar ? "Updating Avatar..." : "Update"}</button>
       </fieldset>
     </form>
   )
-
 }

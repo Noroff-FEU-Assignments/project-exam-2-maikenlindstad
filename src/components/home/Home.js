@@ -14,7 +14,7 @@ export default function Home() {
             <a href="/register" className='cta-btn'>Sign up today</a>
             <p>Already have an account?</p><a href="/login"> Go to Login</a>
           </div>
-          <div>
+          <div className='welcomeInformation'>
             <p>NO.CO, Noroff Community, is a social media app for the students and teachers of Noroff.
               As a student or teacher you have been provided with a stud.noroff.no or a noroff.no email account.
               Enter the app using your provided e-mail.</p>
