@@ -6,10 +6,12 @@ NO.CO is a social media app for the students and teachers of Noroff. Joining NO.
 
 ## Guided usertest
 
-To user test this project please do the following:
-[It will be helpful to keep a notepad next to you whenever questions are raised.]
+During the user test it can be helpful to keep a notepad next to you whenever questions are raised.
+The notes can be sent to some email.
 
-- Start by entering: [NO.CO](https://no-co.netlify.app/)
+To user test this project please do the following:
+
+- Start by entering: [NO.CO Noroff Community](https://no-co.netlify.app/)
 - Log in or sign up
 - You have now entered the social media app. Take a few moments to browse the site.
 - Personalize your account by adding your own banner and avatar.
