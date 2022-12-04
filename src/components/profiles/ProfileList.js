@@ -50,7 +50,6 @@ function ProfileList() {
 
   return (
     <>
-      {/* <NextPage /> */}
       <div className="profilesPage">
         <div className="profileSection">
           {profiles.map(function (profile) {

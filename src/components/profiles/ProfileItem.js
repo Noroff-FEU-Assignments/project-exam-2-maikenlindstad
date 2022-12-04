@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const profilePictureDefault = "https://images.pexels.com/photos/3094799/pexels-photo-3094799.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
 
 
-function ProfileItem({ name, email, avatar }) {
+function ProfileItem({ name, avatar }) {
   return (
     <Link to={`detail/${name}`}>
       <div className="profileCards">

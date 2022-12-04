@@ -5,15 +5,14 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import FormError from "../../common/FormError";
 import useAxios from "../../../hooks/useAxios";
-// import Heading from "../../layout/layoutComponents/Heading";
-import { API, PROFILES_PATH } from "../../../constants/api";
+import { PROFILES_PATH } from "../../../constants/api";
 
 const schema = yup.object().shape({
   banner: yup.string().required("Enter Avatar url")
 });
 
 export default function EditBannerForm() {
-  const [banner, setBanner] = useState(null);
+  const [setBanner] = useState(null);
   const [updated, setUpdated] = useState(false);
   const [fetchingBanner, setFetchingBanner] = useState(true);
   const [updatingBanner, setUpdatingBanner] = useState(false);
@@ -25,11 +24,8 @@ export default function EditBannerForm() {
   });
 
   const http = useAxios();
-
   let { name } = useParams();
-
   const url = PROFILES_PATH + `/` + name;
-
   const navigate = useNavigate();
 
   useEffect(function () {
@@ -61,7 +57,6 @@ export default function EditBannerForm() {
       const response = await http.put(url + "/media", data);
       console.log("The Banner response: ", response.data);
       setUpdated(true);
-      // navigation(-1);
       navigate(-1)
 
     } catch (error) {

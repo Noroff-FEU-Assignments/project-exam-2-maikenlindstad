@@ -41,9 +41,7 @@ export default function RegisterForm() {
 
     try {
       const response = await fetch(url, options);
-      // const json = await response.json();
       console.log("response", response.json);
-      // setAuth(response.data);
       navigate("/login");
     } catch (error) {
       console.log("Error: ", error);
@@ -58,6 +56,7 @@ export default function RegisterForm() {
     <>
       <form className="beforeLoginForm" onSubmit={handleSubmit(onSubmit)}>
         {registerError && <FormError>{registerError}</FormError>}
+
         <fieldset>
 
           <div>
@@ -79,6 +78,7 @@ export default function RegisterForm() {
           <p>(Redirects to login page)</p>
 
         </fieldset>
+
       </form>
     </>
   );

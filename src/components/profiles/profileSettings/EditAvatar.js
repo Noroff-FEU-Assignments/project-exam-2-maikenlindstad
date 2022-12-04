@@ -1,18 +1,13 @@
-import PropTypes from "prop-types";
 import Heading from '../../layout/layoutComponents/Heading';
-import { Link } from 'react-router-dom';
 import EditBannerForm from './EditBannerForm'
 import EditAvatarForm from './EditAvatarForm'
 import { useNavigate } from 'react-router-dom';
 import AuthContext from '../../../context/AuthContext';
-import { useContext, useState, useEffect } from 'react';
-
-
-
+import { useContext } from 'react';
 
 export default function EditComment() {
   const navigation = useNavigate();
-  const [auth, setAuth] = useContext(AuthContext);
+  const [auth] = useContext(AuthContext);
 
   return (
     <>
@@ -29,7 +24,6 @@ export default function EditComment() {
           <div className='profilePictureSection'>
             <div className='profilePictureInfo editing'>
               <Heading title="Copying new url... Editing avatar..." />
-
             </div>
             <EditAvatarForm />
             <div className="breadcrumb" onClick={() => navigation(-1)}>

@@ -5,8 +5,7 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import FormError from "../../common/FormError";
 import useAxios from "../../../hooks/useAxios";
-// import Heading from "../../layout/layoutComponents/Heading";
-import { API, PROFILES_PATH } from "../../../constants/api";
+import { PROFILES_PATH } from "../../../constants/api";
 
 const schema = yup.object().shape({
   avatar: yup.string().required("Enter Avatar url")
@@ -25,9 +24,7 @@ export default function EditAvatarForm() {
   });
 
   const http = useAxios();
-
   let { name } = useParams();
-
   const url = PROFILES_PATH + `/` + name;
 
   useEffect(function () {
