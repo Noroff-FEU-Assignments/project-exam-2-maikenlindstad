@@ -53,9 +53,9 @@ function ProfileList() {
       <div className="profilesPage">
         <div className="profileSection">
           {profiles.map(function (profile) {
-            const { name, email, avatar } = profile;
+            const { name, email, avatar, id } = profile;
             return <div>
-              <ProfileItem key={name} name={name} email={email} avatar={avatar} />
+              <ProfileItem key={id} name={name} email={email} avatar={avatar} />
             </div>;
           })}
         </div>

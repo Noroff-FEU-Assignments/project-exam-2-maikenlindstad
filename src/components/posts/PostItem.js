@@ -54,17 +54,8 @@ function PostItem({ id, title, body, media, created, _count, author }) {
 }
 
 PostItem.propTypes = {
-  key: PropTypes.number.isRequired,
   id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
-  body: PropTypes.string.isRequired,
-  media: PropTypes.string.isRequired,
-  created: PropTypes.string.isRequired,
-  updated: PropTypes.string.isRequired,
-  _count: PropTypes.number.isRequired,
-  comments: PropTypes.string.isRequired,
-  reactions: PropTypes.string.isRequired,
-  avatar: PropTypes.string.isRequired
 };
 
 export default PostItem;
