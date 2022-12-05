@@ -38,6 +38,13 @@ Thank you for participating! <3
 
 # Cloning the project and working on it locally
 
+## Installing
+
+Clone the repo.
+
+Install dependencies.
+`npm install`
+
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -118,8 +125,7 @@ The owners of the repos where I have found codes that have been helpful for my o
 - KThomiss
 - smselnes
 
-linelind, KThomiss and smselnes have also been helpful whenever questions about solutions and
-other things have been asked.
+linelind, KThomiss and smselnes have also been helpful whenever questions about things like examples of styleguides and kanban, where to publish Gantt chart and other things have been asked.
 
 ### Other people:
 
