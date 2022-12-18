@@ -1,4 +1,4 @@
-# Hosted demo user test
+# Noroff Community Social Media
 
 Welcome to NO.CO!
 
@@ -36,9 +36,9 @@ To user test this project please do the following:
 
 Thank you for participating! <3
 
-# Cloning the project and working on it locally
+## Cloning the project and working on it locally
 
-## Installing
+### Installing
 
 Clone the repo.
 
